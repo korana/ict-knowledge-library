@@ -1,6 +1,9 @@
 # OMC working files
 .omc/
 
+# search vector store (derived — rebuild with `./bin/search index`)
+.search-index/
+
 # OS
 .DS_Store
 Thumbs.db

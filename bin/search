@@ -1,0 +1,197 @@
+#!/usr/bin/env bun
+// search — semantic search over concepts/**/*.md, ported from
+// Soul-Brews-Studio/phd-citation-oracle's citation CLI (ψ/lab/citation/src/index.ts).
+// Zero runtime dependencies: local ollama (bge-m3) embeds, a plain Float32
+// file is the vector store, brute-force cosine ranks — no database, no
+// native deps. ~226 concept files stays microseconds even unindexed-per-query.
+//
+//   ./bin/search index
+//   ./bin/search search "50% midpoint of an order block" -k 5
+//   ./bin/search search "..." --json
+
+import { readdir, mkdir } from "node:fs/promises";
+import { join, dirname } from "node:path";
+
+const REPO_ROOT = dirname(dirname(new URL(import.meta.url).pathname));
+const CONCEPTS_DIR = join(REPO_ROOT, "concepts");
+const STORE_DIR = join(REPO_ROOT, ".search-index");
+
+const OLLAMA_URL = process.env.OLLAMA_URL || "http://localhost:11434";
+const OLLAMA_MODEL = process.env.SEARCH_OLLAMA_MODEL || "bge-m3";
+const EMBED_BATCH = 16;
+
+async function embedTexts(texts: string[]): Promise<number[][]> {
+  const res = await fetch(`${OLLAMA_URL}/api/embed`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ model: OLLAMA_MODEL, input: texts }),
+  });
+  if (!res.ok) throw new Error(`ollama embed failed: ${res.status} ${await res.text().catch(() => "")}`);
+  const json = (await res.json()) as { embeddings?: number[][] };
+  if (!json.embeddings?.length) throw new Error("ollama returned no embeddings — is bge-m3 pulled? (ollama pull bge-m3)");
+  return json.embeddings;
+}
+
+async function embedBatched(texts: string[]): Promise<number[][]> {
+  const out: number[][] = [];
+  for (let i = 0; i < texts.length; i += EMBED_BATCH) {
+    out.push(...(await embedTexts(texts.slice(i, i + EMBED_BATCH))));
+  }
+  return out;
+}
+
+// ── the vector store — plain files, same 3-file shape as citation-oracle ──
+type StoreMeta = { id: string; category: string; title: string; path: string };
+type Manifest = { model: string; dim: number; count: number; updated: string };
+
+async function storeWrite(rows: Array<StoreMeta & { vector: number[] }>, model: string): Promise<Manifest> {
+  await mkdir(STORE_DIR, { recursive: true });
+  const dim = rows[0]?.vector.length ?? 0;
+  const flat = new Float32Array(rows.length * dim);
+  rows.forEach((r, i) => flat.set(r.vector, i * dim));
+  await Bun.write(`${STORE_DIR}/vectors.f32`, flat.buffer as ArrayBuffer);
+  await Bun.write(`${STORE_DIR}/meta.jsonl`, rows.map(({ vector: _v, ...m }) => JSON.stringify(m)).join("\n") + "\n");
+  const manifest: Manifest = { model, dim, count: rows.length, updated: new Date().toISOString() };
+  await Bun.write(`${STORE_DIR}/manifest.json`, JSON.stringify(manifest, null, 2));
+  return manifest;
+}
+
+async function storeRead(): Promise<{ meta: StoreMeta[]; vectors: Float32Array; manifest: Manifest } | null> {
+  const mf = Bun.file(`${STORE_DIR}/manifest.json`);
+  if (!(await mf.exists())) return null;
+  const manifest = (await mf.json()) as Manifest;
+  const meta = (await Bun.file(`${STORE_DIR}/meta.jsonl`).text()).split("\n").filter(Boolean).map((l) => JSON.parse(l) as StoreMeta);
+  const vectors = new Float32Array(await Bun.file(`${STORE_DIR}/vectors.f32`).arrayBuffer());
+  return { meta, vectors, manifest };
+}
+
+/** Cosine against every row. Neither side is pre-normalised, so normalise here. */
+function storeSearch(query: number[], vectors: Float32Array, dim: number, count: number) {
+  let qn = 0;
+  for (const v of query) qn += v * v;
+  qn = Math.sqrt(qn) || 1;
+  const out: Array<{ index: number; score: number }> = [];
+  for (let i = 0; i < count; i++) {
+    let dot = 0, rn = 0;
+    const off = i * dim;
+    for (let d = 0; d < dim; d++) {
+      const x = vectors[off + d];
+      dot += x * query[d];
+      rn += x * x;
+    }
+    out.push({ index: i, score: dot / ((Math.sqrt(rn) || 1) * qn) });
+  }
+  out.sort((a, b) => b.score - a.score);
+  return out;
+}
+
+/** Guard against querying a store built with a different embedding model — cosine over two unrelated vector spaces still produces confident-looking nonsense. */
+function modelMismatch(storeModel: string): string | null {
+  if (storeModel === OLLAMA_MODEL) return null;
+  return `⚠ MODEL MISMATCH — index was built with "${storeModel}", current model is "${OLLAMA_MODEL}". Re-run: ./bin/search index`;
+}
+
+// ── concept files ──
+async function walkMarkdown(dir: string): Promise<string[]> {
+  const out: string[] = [];
+  const entries = await readdir(dir, { withFileTypes: true }).catch(() => []);
+  for (const e of entries) {
+    const full = join(dir, e.name);
+    if (e.isDirectory()) out.push(...(await walkMarkdown(full)));
+    else if (e.isFile() && e.name.endsWith(".md")) out.push(full);
+  }
+  return out;
+}
+
+type Concept = { id: string; category: string; title: string; path: string; text: string };
+
+async function loadConcept(file: string): Promise<Concept> {
+  const text = await Bun.file(file).text();
+  const rel = file.replace(`${REPO_ROOT}/`, "");
+  const jsonMatch = text.match(/```json\n([\s\S]*?)\n```/);
+  let id = "", category = "";
+  if (jsonMatch) {
+    try {
+      const j = JSON.parse(jsonMatch[1]);
+      id = j.id ?? "";
+      category = j.category ?? "";
+    } catch { /* fall through to filename-based defaults below */ }
+  }
+  const filenameId = file.split("/").pop()!.replace(/\.md$/, "");
+  const title = text.match(/^#\s+(.+)$/m)?.[1]?.trim() ?? filenameId;
+  return {
+    id: id || filenameId,
+    category: category || rel.split("/").slice(-2, -1)[0] || "",
+    title,
+    path: rel,
+    text,
+  };
+}
+
+async function cmdIndex(): Promise<void> {
+  const files = await walkMarkdown(CONCEPTS_DIR);
+  if (!files.length) throw new Error(`no concept files found under ${CONCEPTS_DIR}`);
+  const concepts = await Promise.all(files.map(loadConcept));
+  console.log(`Loaded ${concepts.length} concept file(s) from ${CONCEPTS_DIR}`);
+
+  const vectors = await embedBatched(concepts.map((c) => c.text));
+  console.log(`Embedded ${vectors.length} item(s) via ollama:${OLLAMA_MODEL}`);
+
+  const rows = concepts.map((c, i) => ({ id: c.id, category: c.category, title: c.title, path: c.path, vector: vectors[i]! }));
+  const manifest = await storeWrite(rows, OLLAMA_MODEL);
+  console.log(`Wrote ${STORE_DIR} — ${manifest.count} × ${manifest.dim}-dim, model ${manifest.model}`);
+}
+
+async function cmdSearch(rest: string[]): Promise<void> {
+  const kFlag = rest.indexOf("-k");
+  const k = kFlag >= 0 ? Number(rest[kFlag + 1]) : 5;
+  const jsonFlag = rest.includes("--json");
+  const strip = new Set(kFlag >= 0 ? [kFlag, kFlag + 1] : []);
+  const query = rest.filter((_, i) => !strip.has(i) && rest[i] !== "--json").join(" ");
+  if (!query) throw new Error("usage: search <query> [-k N] [--json]");
+
+  const store = await storeRead();
+  if (!store) throw new Error(`nothing indexed yet — run "./bin/search index" first`);
+  const mismatch = modelMismatch(store.manifest.model);
+  if (mismatch) throw new Error(mismatch);
+
+  const [vector] = await embedTexts([query]);
+  const hits = storeSearch(vector!, store.vectors, store.manifest.dim, store.meta.length).slice(0, k);
+  const results = hits.map((h) => ({ ...store.meta[h.index], score: Number(h.score.toFixed(4)) }));
+
+  if (jsonFlag) {
+    console.log(JSON.stringify(results, null, 2));
+    return;
+  }
+  console.log(`Top ${results.length} result(s) for "${query}":\n`);
+  for (const r of results) {
+    console.log(`  [${r.score}] (${r.category}) ${r.title}`);
+    console.log(`    ${r.path}\n`);
+  }
+}
+
+async function demo(): Promise<void> {
+  // ponytail: one runnable check — index, then assert a known query surfaces its own concept in top-3.
+  await cmdIndex();
+  const store = await storeRead();
+  if (!store) throw new Error("self-check: index produced no store");
+  const [vector] = await embedTexts(["50% midpoint of an order block's body, entry refinement"]);
+  const hits = storeSearch(vector!, store.vectors, store.manifest.dim, store.meta.length).slice(0, 3);
+  const ids = hits.map((h) => store.meta[h.index]!.id);
+  console.assert(ids.includes("mean-threshold"), `self-check FAILED: expected "mean-threshold" in top-3, got ${JSON.stringify(ids)}`);
+  console.log(`self-check OK: "mean-threshold" found in top-3 (${JSON.stringify(ids)})`);
+}
+
+const [cmd, ...rest] = process.argv.slice(2);
+try {
+  if (cmd === "index") await cmdIndex();
+  else if (cmd === "search") await cmdSearch(rest);
+  else if (cmd === "demo") await demo();
+  else {
+    console.log("usage: search index | search search <query> [-k N] [--json] | search demo");
+    process.exit(1);
+  }
+} catch (error) {
+  console.error(error instanceof Error ? error.message : String(error));
+  process.exit(1);
+}
