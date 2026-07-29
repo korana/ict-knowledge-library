@@ -56,7 +56,7 @@ When the user provides a new source (a 2027 ICT video, a fresh X thread, a commu
 6. **If a new abbreviation is introduced**, add it to `GLOSSARY.md`.
 7. **Append an entry to `log.md`** of form `## [YYYY-MM-DD] ingest | <source title>` with a 2-3 line summary of what changed.
 8. **Run a quick lint** (see Lint section below) on the touched files.
-9. **Commit** with a message matching the existing style (e.g. `ingest: <source title> — N files updated`).
+9. **Stop and show a summary of the changed files for review — do not commit automatically.** Only run `git commit` (message style: `ingest: <source title> — N files updated`) after the user explicitly confirms (e.g. "commit this" / "looks good, commit").
 
 ### Query — answer a question against the wiki
 
