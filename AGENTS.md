@@ -94,6 +94,7 @@ Periodically (or when asked):
 7. **Look for orphan pages** with no inbound links from any other concept file or root index.
 8. **Look for missing concepts** — terms repeatedly mentioned in body text or `Related Concepts` that don't have their own file.
 9. **Append a lint entry to `log.md`** with summary of issues found and fixed.
+10. **Stop and show the lint results for review — do not commit automatically.** Only run `git commit` after the user explicitly confirms.
 
 ---
 
