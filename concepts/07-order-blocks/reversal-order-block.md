@@ -89,6 +89,7 @@ M15+ for meaningful structural context.
 
 - [bullish-order-block](bullish-order-block.md), [bearish-order-block](bearish-order-block.md), [continuation-order-block](continuation-order-block.md), [order-block-criteria](order-block-criteria.md).
 - [mss](../01-market-structure/mss.md), [choch-bullish](../01-market-structure/choch-bullish.md), [choch-bearish](../01-market-structure/choch-bearish.md).
+- [mitigation-block](../08-breaker-blocks/mitigation-block.md) — a 2026 community source uses "Mitigation Block" to mean this same reversal-anchored object; see that file's `## ICT vs Community` section before treating the two terms as interchangeable.
 
 ## Citations
 

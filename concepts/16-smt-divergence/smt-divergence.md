@@ -1,11 +1,11 @@
 # SMT Divergence
 
 **Category:** 16-smt-divergence
-**Aliases:** SMT, Smart Money Technique, smart money divergence, intermarket divergence
+**Aliases:** SMT, Smart Money Technique, smart money divergence, intermarket divergence, Smart Money Reversal, SMR, SMR Divergence, Classic Divergence
 **ICT Confidence:** high
 **Year Introduced:** 2018
-**Year Refined:** 2022
-**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-SMART-MONEY-REVERSAL, THAI-COMMUNITY-2026-MMXM
 **Tags:** smt, divergence, intermarket, foundational
 
 ## Definition
@@ -43,7 +43,7 @@ bearish_smt(t):
 {
   "id": "smt-divergence",
   "category": "16-smt-divergence",
-  "aliases": ["SMT", "smart-money-technique", "intermarket-divergence"],
+  "aliases": ["SMT", "smart-money-technique", "smart-money-divergence", "intermarket-divergence", "smart-money-reversal", "SMR", "smr-divergence", "classic-divergence"],
   "criteria": [
     {"id": "c1", "expr": "two_correlated_assets_used"},
     {"id": "c2", "expr": "one asset makes new extreme; other does not confirm"},
@@ -52,9 +52,9 @@ bearish_smt(t):
   "timeframes": ["M5","M15","H1","H4","D"],
   "confidence": "high",
   "year_introduced": "2018",
-  "year_refined": "2022",
-  "related": ["correlated-pairs-smt","index-smt","smt-confirmation","smt-failure","liquidity-sweep","htf-bias-framework"],
-  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "year_refined": "2026",
+  "related": ["correlated-pairs-smt","index-smt","smt-confirmation","smt-failure","liquidity-sweep","htf-bias-framework","market-maker-model"],
+  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-SMART-MONEY-REVERSAL","THAI-COMMUNITY-2026-MMXM"]
 }
 ```
 
@@ -97,8 +97,11 @@ M5–D. HTF SMT (D, W) is most reliable; LTF SMT (M5) noisier but useful for ent
 
 - [correlated-pairs-smt](correlated-pairs-smt.md), [index-smt](index-smt.md), [smt-confirmation](smt-confirmation.md), [smt-failure](smt-failure.md).
 - [liquidity-sweep](../02-liquidity/liquidity-sweep.md), [htf-bias-framework](../25-htf-bias/htf-bias-framework.md).
+- [market-maker-model](../31-models/market-maker-model.md) — "Classic Divergence" is this technique used to verify the model's Smart Money Reversal state, one of two verification routes alongside Failure Swing.
 
 ## Citations
 
 - `ICT-2017-CHARTER-OVERVIEW` — SMT terminology refined.
 - `ICT-2022-MENTORSHIP-OVERVIEW` — operational SMT use.
+- `THAI-COMMUNITY-2026-SMART-MONEY-REVERSAL` — "SMR" / "Smart Money Reversal" as the modern ICT-era name for this same divergence technique, p.304.
+- `THAI-COMMUNITY-2026-MMXM` — "Classic Divergence" alias, used to verify a Market Maker Model Smart Money Reversal via a correlated pair (e.g. EURUSD vs. GBPUSD/DXY), pp.377, 383, 386.

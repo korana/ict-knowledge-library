@@ -4,8 +4,8 @@
 **Aliases:** BPR, balanced range, mirror FVG zone, opposing FVG overlap
 **ICT Confidence:** high
 **Year Introduced:** 2017
-**Year Refined:** 2023
-**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-FVG-TECHNIQUE
 **Tags:** fvg, bpr, balance, ranging
 
 ## Definition
@@ -42,9 +42,9 @@ is_bpr = overlap[0] < overlap[1]      # non-empty intersection
   "timeframes": ["M5","M15","H1","H4","D"],
   "confidence": "high",
   "year_introduced": "2017",
-  "year_refined": "2023",
+  "year_refined": "2026",
   "related": ["fair-value-gap","bullish-fvg","bearish-fvg","range-contraction","htf-bias-framework","pd-array-confluence"],
-  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-FVG-TECHNIQUE"]
 }
 ```
 
@@ -75,6 +75,7 @@ M15+. M5 BPRs are too noisy.
 - **Trading BPR without HTF bias.** Both directions can fire from BPR; HTF bias is the tiebreaker.
 - **Calling overlapping wicks "BPR."** Both ranges must be valid 3-candle FVGs; wick-overlap alone doesn't qualify.
 - **Stale BPR.** Once one of the FVGs is mitigated, the BPR character is gone — only the surviving FVG matters.
+- **Reading "Inversion" as a required displacement-close event here.** A 2026 community source (`THAI-COMMUNITY-2026-FVG-TECHNIQUE`) walks through BPR formation as: an FVG forms, price sweeps liquidity beyond it, a retracement creates the opposing FVG overlapping the same zone, and it calls the older leg "the Inversion." That's a looser, descriptive use of the word — not a claim that the older FVG must first be closed-through per [inversion-fvg](inversion-fvg.md)'s stricter displacement criterion. Don't conflate the two; this file's overlap-of-two-opposing-FVGs definition stands as-is.
 
 ## Related Concepts
 
@@ -85,3 +86,4 @@ M15+. M5 BPRs are too noisy.
 ## Citations
 
 - `ICT-2017-CHARTER-OVERVIEW`, `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `THAI-COMMUNITY-2026-FVG-TECHNIQUE` — worked +BPR/-BPR examples and the "Inversion" naming for the older FVG leg, pp. 152–157.

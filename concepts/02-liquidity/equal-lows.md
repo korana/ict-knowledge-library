@@ -4,8 +4,8 @@
 **Aliases:** EQL, double bottom liquidity, twin lows, relative equal lows (REL)
 **ICT Confidence:** high
 **Year Introduced:** 2017
-**Year Refined:** 2022
-**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-TURTLE-SOUP
 **Tags:** liquidity, eql, sellside, foundational
 
 ## Definition
@@ -42,9 +42,9 @@ equal_lows(SL_1, SL_2) := |L(SL_1) - L(SL_2)| <= ε
   "timeframes": ["M1","M5","M15","H1","H4","D","W"],
   "confidence": "high",
   "year_introduced": "2017",
-  "year_refined": "2022",
-  "related": ["equal-highs","sell-side-liquidity","relative-equal-highs-lows","liquidity-sweep","liquidity-pool","swing-low"],
-  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "year_refined": "2026",
+  "related": ["equal-highs","sell-side-liquidity","relative-equal-highs-lows","liquidity-sweep","liquidity-pool","swing-low","turtle-soup"],
+  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-TURTLE-SOUP"]
 }
 ```
 
@@ -78,6 +78,7 @@ Every TF.
 - **Tolerance too tight or too loose.** 0-pip strict matching misses obvious patterns; 10+ pips on EURUSD H1 is too loose. Calibrate per instrument.
 - **No intervening pivot.** Two adjacent bars at the same low are not EQL.
 - **Reversal certainty.** EQL sweep often reverses but not always; require PD-array / session confluence.
+- **Looking here for the sweep+FVG+MSS entry technique.** This file covers what EQL *is*, not how to trade a sweep of it. For a worked EQL sweep + FVG + Market Structure Shift + equilibrium-rebalance entry example, see [turtle-soup](../20-turtle-soup/turtle-soup.md)'s Examples.
 
 ## Related Concepts
 
@@ -86,8 +87,10 @@ Every TF.
 - [relative-equal-highs-lows](relative-equal-highs-lows.md) — within-tolerance variant.
 - [liquidity-sweep](liquidity-sweep.md) — sweep behavior.
 - [swing-low](../01-market-structure/swing-low.md) — building block.
+- [turtle-soup](../20-turtle-soup/turtle-soup.md) — worked EQL sweep + FVG + MSS + equilibrium-rebalance entry technique.
 
 ## Citations
 
 - `ICT-2017-CHARTER-OVERVIEW` — EQL terminology.
 - `ICT-2022-MENTORSHIP-OVERVIEW` — operational use.
+- `THAI-COMMUNITY-2026-TURTLE-SOUP` — worked EQL sweep + FVG + equilibrium-rebalance entry example, pp.271–272 (see [turtle-soup](../20-turtle-soup/turtle-soup.md)).

@@ -4,8 +4,8 @@
 **Aliases:** ICT fib, ICT-specific fib levels, OTE fib, ICT retracement levels
 **ICT Confidence:** high
 **Year Introduced:** 2017
-**Year Refined:** 2022
-**Source IDs:** ICT-2017-OTE, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2017-OTE, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-OTE
 **Tags:** fibonacci, fib, ote, retracement, projection
 
 ## Definition
@@ -62,9 +62,9 @@ SD_-2_0  = 1.0900 + 200 = 1.1100
   "timeframes": ["M5","M15","H1","H4","D","W"],
   "confidence": "high",
   "year_introduced": "2017",
-  "year_refined": "2022",
+  "year_refined": "2026",
   "related": ["fib-62","fib-705","fib-79","standard-deviation-projections","symmetrical-price-projections","fib-vs-ote","ote-overview","equilibrium-definition"],
-  "sources": ["ICT-2017-OTE","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "sources": ["ICT-2017-OTE","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-OTE"]
 }
 ```
 
@@ -102,6 +102,7 @@ All TFs.
 
 - **Using classical fib set.** 0.382, 0.50, 0.618, 1.272, 1.618 are common but NOT ICT's primary set. Use 0.62 / 0.705 / 0.79 / SD ratios instead.
 - **Anchoring poorly.** Anchor to a clean swing leg with structural significance (a confirmed swing high to swing low, not a random pivot).
+- **Picking swings with no selection procedure.** "Structurally significant" doesn't say *which* swing. A 2026 community source states its own default: anchor to the **prior completed period's** low→high range on the timeframe being traded — a Monday day-trade uses Friday's daily range, Tuesday uses Monday's; a new trading week uses last week's range; a new month uses last month's range. Drill into swings *inside* that range only after it's set. Treat this as one reasonable default, not the only valid one — the source's own later worked example (measuring within the current month rather than from the prior month's low) doesn't follow this rule, so don't treat it as a strict gate either.
 - **Ignoring HTF.** Fib levels alone are not entries; require PD-array + HTF confluence at the level.
 
 ## Related Concepts
@@ -117,3 +118,4 @@ All TFs.
 
 - `ICT-2017-OTE` — ICT fib levels introduced.
 - `ICT-2022-MENTORSHIP-OVERVIEW` — operational use refined.
+- `THAI-COMMUNITY-2026-OTE` — prior-completed-period swing-selection default (day/week/month range priority), p.285.

@@ -4,8 +4,8 @@
 **Aliases:** displacement, expansion candle, momentum candle, force candle
 **ICT Confidence:** high
 **Year Introduced:** 2017
-**Year Refined:** 2022
-**Source IDs:** ICT-2017-DISPLACEMENT, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2017-DISPLACEMENT, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-FVG
 **Tags:** displacement, momentum, foundational
 
 ## Definition
@@ -56,9 +56,9 @@ is_displacement_simple(n) := leaves_fvg_inside_or_through(n)
   "timeframes": ["M5","M15","H1","H4","D","W"],
   "confidence": "high",
   "year_introduced": "2017",
-  "year_refined": "2022",
+  "year_refined": "2026",
   "related": ["displacement-and-fvg","fair-value-gap","mss","range-expansion","liquidity-void","order-block-criteria","propulsion-block"],
-  "sources": ["ICT-2017-DISPLACEMENT","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "sources": ["ICT-2017-DISPLACEMENT","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-FVG"]
 }
 ```
 
@@ -99,6 +99,7 @@ All TFs M5+. The character of displacement scales with TF — an H4 displacement
 - **Calling any wide candle "displacement."** Without the body-dominance and opposing-wick checks, wide candles in choppy markets aren't displacement.
 - **Skipping the FVG test.** ICT's shortcut: real displacement leaves an FVG. If no FVG forms, the candle is unlikely to be true displacement.
 - **Ignoring scale.** Displacement is relative to recent average — a candle that's "wide" in a quiet session might be normal in a volatile one.
+- **Missing that this file's criteria are a named candle-shape pattern elsewhere.** A 2026 community source (`THAI-COMMUNITY-2026-FVG`) calls the same wide-body/minimal-wick candle shape an "Engulfing or Marubozu" candle, framed as an objective (candle-shape) alternative to the more commonly taught "displacement = MSS + FVG together" definition — see [displacement-and-fvg](displacement-and-fvg.md). Same criteria, different name and framing; not a new requirement.
 
 ## Related Concepts
 
@@ -107,3 +108,4 @@ All TFs M5+. The character of displacement scales with TF — an H4 displacement
 ## Citations
 
 - `ICT-2017-DISPLACEMENT`, `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `THAI-COMMUNITY-2026-FVG` — "Engulfing/Marubozu" naming for the same candle shape, pp. 99–101.

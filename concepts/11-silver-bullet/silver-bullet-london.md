@@ -4,17 +4,19 @@
 **Aliases:** London SB, LDN silver bullet, 3am SB
 **ICT Confidence:** high
 **Year Introduced:** 2022
-**Year Refined:** 2025
-**Source IDs:** ICT-2022-SILVER-BULLET, ICT-2025-MACRO-PRECISION
+**Year Refined:** 2026
+**Source IDs:** ICT-2022-SILVER-BULLET, ICT-2025-MACRO-PRECISION, ICT-2026-LONDON-SB-SHIFT, THAI-COMMUNITY-2026-SILVER-BULLET
 **Tags:** silver-bullet, london
 
 ## Definition
 
-The London Silver Bullet is the **03:00–04:00 NY** Silver Bullet window — the SB inside the London Open killzone (02:00–05:00). It overlaps the 02:50–03:10 macro time and is typically the window where the **post-Asian-range Judas swing reverses and London's true delivery begins**. Medium probability versus the higher-probability NY AM SB, but the cleanest of the three when the Asian range is well-defined.
+The London Silver Bullet is the **02:00–03:00 NY** Silver Bullet window — the SB inside the London Open killzone (02:00–05:00). In 2026, ICT clarified this window shifted from 03:00-04:00 to 02:00-03:00 NY time due to liquidity provider routing changes post-MiFID III. It is typically the window where the **post-Asian-range Judas swing reverses and London's true delivery begins**. Medium probability versus the higher-probability NY AM SB, but the cleanest of the three when the Asian range is well-defined.
+
+> **Time conflict (2026):** a same-year Thai Community source (`THAI-COMMUNITY-2026-SILVER-BULLET`) states the London Silver Bullet window as **03:00–04:00 NY** — the pre-shift time — with no mention of any MiFID III-driven shift. Its Thai-time column rules out a translation slip (บ่าย 3–4 โมง = 15:00–16:00 Thai = 03:00–04:00 NY exactly). Not adopted as a correction to the 02:00–03:00 window above — the source never addresses the shift claim, and may simply be republishing pre-2026 knowledge rather than contradicting it — but recorded as an unresolved conflict rather than silently overridden. See Citations.
 
 ## Formal Criteria
 
-- Time window: 03:00 – 04:00 NY.
+- Time window: 02:00 – 03:00 NY.
 - Inside London Open killzone.
 - Sequence: Asian-range sweep (often inside or just before SB window) → displacement → FVG → CE retest entry.
 - Targets: Asian-range projections, PDH/PDL, HTF DOL.
@@ -22,7 +24,7 @@ The London Silver Bullet is the **03:00–04:00 NY** Silver Bullet window — th
 ## Formula / Math
 
 ```
-ldn_sb_window     = [03:00, 04:00] NY
+ldn_sb_window     = [02:00, 03:00] NY
 overlapping_macro = [02:50, 03:10] NY
 parent_killzone   = [02:00, 05:00] NY
 ```
@@ -35,16 +37,16 @@ parent_killzone   = [02:00, 05:00] NY
   "category": "11-silver-bullet",
   "aliases": ["London-SB", "LDN-SB", "3am-SB"],
   "criteria": [
-    {"id": "c1", "expr": "time in [03:00, 04:00] NY"},
+    {"id": "c1", "expr": "time in [02:00, 03:00] NY"},
     {"id": "c2", "expr": "Asian-range sweep is typical setup"},
     {"id": "c3", "expr": "HTF bias agreement"}
   ],
   "timeframes": ["M1","M5","M15"],
   "confidence": "high",
   "year_introduced": "2022",
-  "year_refined": "2025",
+  "year_refined": "2026",
   "related": ["silver-bullet-overview","silver-bullet-rules","london-open-killzone","asian-range","asian-range-sweep","macro-time-0250-0310","judas-swing","london-judas-swing"],
-  "sources": ["ICT-2022-SILVER-BULLET","ICT-2025-MACRO-PRECISION"]
+  "sources": ["ICT-2022-SILVER-BULLET","ICT-2025-MACRO-PRECISION","ICT-2026-LONDON-SB-SHIFT","THAI-COMMUNITY-2026-SILVER-BULLET"]
 }
 ```
 
@@ -52,8 +54,8 @@ parent_killzone   = [02:00, 05:00] NY
 
 ```
    02:00 ── 02:50 ─ 03:00 ──── 03:10 ─── 04:00 ── 05:00 NY
+   ██████████████████ ← London SB window
               █████ macro
-                     ██████████████████ ← London SB window
    ────── London Open KZ ───────────────
 ```
 
@@ -73,7 +75,7 @@ M1 / M5.
 
 ## Common Mistakes
 
-- **Pre-window trades.** Setups firing before 03:00 are still in the macro / killzone but outside the formal SB window — apply SB rules with caution.
+- **Pre-window trades.** Setups firing before 02:00 are outside the formal SB window — apply SB rules with caution.
 - **Counter-Asian-bias SBs.** Reading bias only from Asia (without HTF) leads to wrong-side SB entries.
 
 ## Related Concepts
@@ -83,3 +85,5 @@ M1 / M5.
 ## Citations
 
 - `ICT-2022-SILVER-BULLET`, `ICT-2025-MACRO-PRECISION`.
+- `ICT-2026-LONDON-SB-SHIFT` — shifted window to 02:00-03:00 NY due to MiFID III.
+- `THAI-COMMUNITY-2026-SILVER-BULLET` — states the window as 03:00-04:00 NY, conflicting with the shift above; not adopted, recorded as an open conflict (see Time Conflict callout).

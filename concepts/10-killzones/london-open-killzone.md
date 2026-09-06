@@ -4,13 +4,13 @@
 **Aliases:** London Open KZ, LDN open KZ, LO killzone
 **ICT Confidence:** high
 **Year Introduced:** 2016
-**Year Refined:** 2022
-**Source IDs:** ICT-2016-KILLZONES, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2016-KILLZONES, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-CBDR
 **Tags:** killzones, london, manipulation, open
 
 ## Definition
 
-The London Open killzone is the 02:00 → 05:00 NY sub-window of the London session and ICT's prime morning manipulation window. The classic delivery: sweep one side of the [asian-range](../14-asian-range/asian-range.md) (Judas swing) inside the first 60 minutes, then displace in the opposite direction toward HTF DOL. This is one of the highest-volume killzones of the day — second only to London Close × NY AM overlap.
+The London Open killzone is the 02:00 → 05:00 NY sub-window of the London session and ICT's prime morning manipulation window. The classic delivery: sweep one side of the [asian-range](../14-asian-range/asian-range.md) (Judas swing) inside the first 60 minutes, then displace in the opposite direction toward HTF DOL — the swept extreme typically becomes the day's high or low (its eventual wick) once price reverses away from it (community-attributed). This is one of the highest-volume killzones of the day — second only to London Close × NY AM overlap.
 
 ## Formal Criteria
 
@@ -19,6 +19,7 @@ The London Open killzone is the 02:00 → 05:00 NY sub-window of the London sess
 - Behavioral profile: opening manipulation move (Judas swing) → CHoCH/MSS → expansion.
 - Contains the 02:50–03:10 macro time window.
 - Often defines the day's HOD or LOD via the post-Judas displacement.
+- **Real expansion often lags the window open by ~30 minutes (community-attributed):** a 2026 community source observes price typically doesn't begin its true directional move until roughly 02:30 NY, even though the killzone window itself opens at 02:00. That source names this instant "Open True Day" — a label already used in this wiki for the 00:00 NY daily anchor (see [true-day-open](../22-quarterly-theory/true-day-open.md)), so the name is not adopted here, only the timing observation.
 
 ## Formula / Math
 
@@ -41,9 +42,9 @@ contains_macro = [02:50, 03:10] NY
   "timeframes": ["M1","M5","M15"],
   "confidence": "high",
   "year_introduced": "2016",
-  "year_refined": "2022",
-  "related": ["killzone-overview","london-session","asian-range","judas-swing","silver-bullet-london","macro-time-0250-0310","manipulation-phase"],
-  "sources": ["ICT-2016-KILLZONES","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "year_refined": "2026",
+  "related": ["killzone-overview","london-session","asian-range","judas-swing","silver-bullet-london","macro-time-0250-0310","manipulation-phase","true-day-open"],
+  "sources": ["ICT-2016-KILLZONES","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-CBDR"]
 }
 ```
 
@@ -80,8 +81,9 @@ M1 / M5 / M15. The first 30–60 minutes of the killzone (02:00–03:00) typical
 
 ## Related Concepts
 
-- [killzone-overview](killzone-overview.md), [london-session](../15-sessions/london-session.md), [asian-range](../14-asian-range/asian-range.md), [judas-swing](../13-judas-swing/judas-swing.md), [silver-bullet-london](../11-silver-bullet/silver-bullet-london.md), [macro-time-0250-0310](../04-time-cycles/macro-time-0250-0310.md), [manipulation-phase](../12-power-of-three/manipulation-phase.md).
+- [killzone-overview](killzone-overview.md), [london-session](../15-sessions/london-session.md), [asian-range](../14-asian-range/asian-range.md), [judas-swing](../13-judas-swing/judas-swing.md), [silver-bullet-london](../11-silver-bullet/silver-bullet-london.md), [macro-time-0250-0310](../04-time-cycles/macro-time-0250-0310.md), [manipulation-phase](../12-power-of-three/manipulation-phase.md), [true-day-open](../22-quarterly-theory/true-day-open.md) — see the "Open True Day" naming-collision note above.
 
 ## Citations
 
 - `ICT-2016-KILLZONES`, `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `THAI-COMMUNITY-2026-CBDR` — swept-extreme-becomes-the-day's-wick framing and the ~30-minute lag before true expansion ("Open True Day", not adopted as a label here), p.457, pp.463–465.

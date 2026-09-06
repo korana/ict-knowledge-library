@@ -4,8 +4,8 @@
 **Aliases:** NWOG, weekly gap, weekend gap
 **ICT Confidence:** high
 **Year Introduced:** 2023
-**Year Refined:** 2024
-**Source IDs:** ICT-2023-NDOG-NWOG
+**Year Refined:** 2026
+**Source IDs:** ICT-2023-NDOG-NWOG, THAI-COMMUNITY-2026-FVG-TECHNIQUE
 **Tags:** model, nwog, weekend-gap
 
 ## Definition
@@ -49,9 +49,9 @@ nwog_dir  = "bullish" if weekend_open > friday_close else "bearish"
   "timeframes": ["H1","H4","D"],
   "confidence": "high",
   "year_introduced": "2023",
-  "year_refined": "2024",
-  "related": ["ndog","sunday-open-gap","true-week-open","vacuum-block","time-of-day-pivots"],
-  "sources": ["ICT-2023-NDOG-NWOG"]
+  "year_refined": "2026",
+  "related": ["ndog","sunday-open-gap","true-week-open","vacuum-block","time-of-day-pivots","volume-imbalance"],
+  "sources": ["ICT-2023-NDOG-NWOG","THAI-COMMUNITY-2026-FVG-TECHNIQUE"]
 }
 ```
 
@@ -91,11 +91,14 @@ H1 / H4 / D.
 - **Trading the weekend gap immediately.** Sunday-Monday open volume is thin; wait for London volume on Monday for cleaner setups.
 - **Different broker times.** NWOG references vary slightly by broker (some open 18:00 Sunday, others 22:00 Sunday, some 00:00 Monday). Specify broker convention.
 - **Treating partial fills as failures.** NWOG fill to ~75% is common; full fill happens but isn't required.
+- **Missing the Volume Imbalance connection.** A 2026 community source (`THAI-COMMUNITY-2026-FVG-TECHNIQUE`) points out NWOG is the same body-vs-body gap geometry as [volume-imbalance](../06-fair-value-gaps/volume-imbalance.md), just occurring specifically at the weekly candle boundary — NWOG is a named special case, not a separate concept.
 
 ## Related Concepts
 
 - [ndog](ndog.md), [sunday-open-gap](sunday-open-gap.md), [true-week-open](../22-quarterly-theory/true-week-open.md), [vacuum-block](../07-order-blocks/vacuum-block.md), [time-of-day-pivots](../04-time-cycles/time-of-day-pivots.md).
+- [volume-imbalance](../06-fair-value-gaps/volume-imbalance.md) — the general body-vs-body gap pattern NWOG is a weekly-boundary instance of.
 
 ## Citations
 
 - `ICT-2023-NDOG-NWOG`.
+- `THAI-COMMUNITY-2026-FVG-TECHNIQUE` — VI↔NWOG equivalence observation, pp. 171–172.

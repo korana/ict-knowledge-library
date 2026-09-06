@@ -86,6 +86,7 @@ Every TF M5 → W. Higher-TF expansion is rarer but produces the largest moves a
 
 ## Related Concepts
 
+- [price-delivery-cycle](price-delivery-cycle.md) — the full 4-state cycle this phase belongs to.
 - [range-contraction](range-contraction.md) — the prior phase.
 - [bos-bullish](bos-bullish.md) / [bos-bearish](bos-bearish.md) — usually triggers the expansion.
 - [displacement-definition](../09-displacement/displacement-definition.md) — what an expansion candle looks like.

@@ -4,8 +4,8 @@
 **Aliases:** W bias, weekly direction
 **ICT Confidence:** high
 **Year Introduced:** 2017
-**Year Refined:** 2022
-**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-DAILY-WEEKLY-PROFILE
 **Tags:** htf-bias, weekly
 
 ## Definition
@@ -22,7 +22,7 @@ Weekly bias is bullish when:
 
 Bearish when symmetric. Neutral when conflicting / at EQ.
 
-Common time-of-week tendency: PWL (previous week low) often gets swept early in the week (Mon/Tue) before the weekly direction asserts (Wed-Thu distribution).
+Common time-of-week tendency: PWL (previous week low) often gets swept early in the week (Mon/Tue) before the weekly direction asserts (Wed-Thu distribution). A 2026 community source names this specific shape "Classic Tuesday Low/High of Week" — see [weekly-profile-patterns](../22-quarterly-theory/weekly-profile-patterns.md) for that named taxonomy and five sibling shapes.
 
 ## Formula / Math
 
@@ -52,8 +52,8 @@ weekly_bias :=
   "confidence": "high",
   "year_introduced": "2017",
   "year_refined": "2022",
-  "related": ["htf-bias-framework","monthly-bias","daily-bias","bias-confluence","top-down-analysis","htf-amd","dealing-range"],
-  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "related": ["htf-bias-framework","monthly-bias","daily-bias","bias-confluence","top-down-analysis","htf-amd","dealing-range","weekly-profile-patterns"],
+  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-DAILY-WEEKLY-PROFILE"]
 }
 ```
 
@@ -90,7 +90,9 @@ W / D.
 ## Related Concepts
 
 - [htf-bias-framework](htf-bias-framework.md), [monthly-bias](monthly-bias.md), [daily-bias](daily-bias.md), [bias-confluence](bias-confluence.md), [top-down-analysis](top-down-analysis.md), [htf-amd](../12-power-of-three/htf-amd.md), [dealing-range](../05-pd-arrays/dealing-range.md).
+- [weekly-profile-patterns](../22-quarterly-theory/weekly-profile-patterns.md) — named taxonomy this file's Tuesday-sweep adage belongs to (Pattern #1).
 
 ## Citations
 
 - `ICT-2017-CHARTER-OVERVIEW`, `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `THAI-COMMUNITY-2026-DAILY-WEEKLY-PROFILE` — "Classic Tuesday Low/High of Week" naming, p.566.

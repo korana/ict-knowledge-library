@@ -4,8 +4,8 @@
 **Aliases:** FX SMT, currency-pair SMT, cross-pair divergence
 **ICT Confidence:** high
 **Year Introduced:** 2018
-**Year Refined:** 2022
-**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-SMART-MONEY-REVERSAL
 **Tags:** smt, fx, correlated-pairs
 
 ## Definition
@@ -16,7 +16,7 @@ Correlated-pairs SMT is the application of SMT divergence to **FX pair pairings*
 
 A correlated-pair SMT requires:
 
-- Two FX pairs with **strong positive correlation** (typical: EUR vs GBP majors, AUD vs NZD, USD-bases, etc.).
+- Two FX pairs (or, per a 2026 community source, any other strongly correlated instrument pair — e.g. BTC/ETH) with **strong positive correlation** (typical: EUR vs GBP majors, AUD vs NZD, USD-bases, etc.).
 - Both pairs are reaching a known structural level (sweep, swing extreme).
 - One pair confirms (makes new high/low); the other fails to confirm (lower high or higher low).
 - Confirmation requires inspecting the **same time-of-day candle** on both charts (don't compare 09:00 EURUSD with 10:00 GBPUSD).
@@ -50,9 +50,9 @@ bearish_smt(asset_A, asset_B, t):
   "timeframes": ["M5","M15","H1","H4","D"],
   "confidence": "high",
   "year_introduced": "2018",
-  "year_refined": "2022",
+  "year_refined": "2026",
   "related": ["smt-divergence","index-smt","smt-confirmation","smt-failure"],
-  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-SMART-MONEY-REVERSAL"]
 }
 ```
 
@@ -73,9 +73,14 @@ M5–D. Most-traded on H1 and H4.
 - → bullish SMT. EURUSD took new low, GBPUSD did not.
 - Long EURUSD or GBPUSD on next bullish FVG.
 
+**Example 2 — BTC vs ETH bullish SMT (crypto, outside FX):**
+- The same correlated-pair technique applies directly to crypto: BTC and ETH (the two largest assets by market cap) form a symmetrical-correlation pair, analogous to EURUSD/GBPUSD.
+- BTC sweeps a session low; ETH's matching swing holds higher — bullish SMT, no modification to the FX method needed.
+
 ## Common Mistakes
 
 - **Comparing weakly-correlated pairs.** EURUSD vs USDJPY has weaker / inconsistent correlation — SMT logic becomes unreliable, not inverted. Inverse SMT applies only to strong-negative pairings (e.g. EURUSD vs DXY).
+- **Trusting JPY-cross groupings like USD-base groupings.** EUR/JPY vs GBP/JPY looks like the same pattern as EURUSD/GBPUSD, but JPY-quoted crosses correlate less consistently than USD-quoted pairs — verify the correlation strength before relying on it (a free tool like Myfxbook's correlation matrix, checked across 1-day/1-week/1-month windows, catches this before it costs a trade).
 - **Wrong time alignment.** Compare 03:00 NY EURUSD with 03:00 NY GBPUSD, not adjacent candles.
 - **Ignoring the structural level.** SMT at a random pair of M1 candles is noise; SMT at a known SSL/BSL is the signal.
 
@@ -86,3 +91,4 @@ M5–D. Most-traded on H1 and H4.
 ## Citations
 
 - `ICT-2017-CHARTER-OVERVIEW`, `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `THAI-COMMUNITY-2026-SMART-MONEY-REVERSAL` — BTC/ETH as a crypto symmetrical-correlation pair (p.300), JPY-cross correlation caveat and Myfxbook correlation-checking tool (p.301–303).

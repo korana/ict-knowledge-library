@@ -4,8 +4,8 @@
 **Aliases:** none (disambiguation page)
 **ICT Confidence:** high
 **Year Introduced:** 2017
-**Year Refined:** 2022
-**Source IDs:** ICT-2017-OTE, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2017-OTE, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-OTE
 **Tags:** fibonacci, ote, disambiguation, terminology
 
 ## Definition
@@ -41,6 +41,8 @@ OTE retracement zone ⊂ ICT fib retracement levels ⊂ ICT fib (umbrella)
 
 The OTE zone uses three of the four ICT retracement levels (0.62, 0.705, 0.79). 0.50 (EQ) is fib but is shallower than OTE and not part of the OTE zone.
 
+A 2026 community source states the reason classical sub-50% levels (0.236, 0.382) are absent from this set explicitly: OTE is built on the premium/discount principle, and any level shallower than equilibrium (0.50) is structurally the wrong side of the range for an entry — those two classical levels simply have no role to play in an OTE-anchored approach.
+
 ## Formula / Math
 
 ```
@@ -69,9 +71,9 @@ OTE_optimal          = 0.705
   "timeframes": ["M5","M15","H1","H4","D","W"],
   "confidence": "high",
   "year_introduced": "2017",
-  "year_refined": "2022",
+  "year_refined": "2026",
   "related": ["ict-fib-overview","fib-62","fib-705","fib-79","ote-overview","ote-62","ote-705","ote-79","equilibrium-definition","standard-deviation-projections"],
-  "sources": ["ICT-2017-OTE","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "sources": ["ICT-2017-OTE","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-OTE"]
 }
 ```
 
@@ -125,3 +127,4 @@ All TFs.
 ## Citations
 
 - `ICT-2017-OTE`, `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `THAI-COMMUNITY-2026-OTE` — premium/discount rationale for excluding classical sub-50% levels (0.236, 0.382), p.281.

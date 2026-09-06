@@ -4,13 +4,15 @@
 **Aliases:** London Judas, LDN Judas, London-open Judas
 **ICT Confidence:** high
 **Year Introduced:** 2018
-**Year Refined:** 2022
-**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-JUDAS-SWING
 **Tags:** judas, london, sweep
 
 ## Definition
 
 The London Judas swing is the canonical session-open Judas — the deceptive directional move at the start of London (02:00 NY) that sweeps the [asian-range](../14-asian-range/asian-range.md) on the wrong side before the algorithm reverses and delivers the true HTF-bias-aligned move. This is the most-frequent Judas pattern in ICT's framework and the highest-quality version because the Asian range is a clean, well-defined liquidity setup overnight.
+
+**Why this window specifically:** a 2026 community source frames the 00:00–05:00 NY window as existing because three sessions' open/close times cluster there — NY midnight is the [TDO](../22-quarterly-theory/true-day-open.md) / IPDA daily reset (the algorithmic start of the new trading day), shortly followed by the London market open, with the Tokyo/Asian session close also falling in the same stretch. The source's own clock figures for the London-open and Tokyo-close components are internally inconsistent with its own later "02:00–05:00" statement (p.275 vs p.278) and are treated as a transcription artifact, not cited — the causal claim (three session boundaries overlapping is *why* this window is Judas-prone) is the substantive contribution, independent of the exact minute figures.
 
 ## Formal Criteria
 
@@ -19,6 +21,7 @@ The London Judas swing is the canonical session-open Judas — the deceptive dir
 - Macro overlap: 02:50–03:10 NY macro window often contains the sweep.
 - Reversal: occurs in the same killzone, displaces, leaves an FVG.
 - Direction post-reversal: aligns with HTF bias.
+- Entry array: usually a fresh FVG, but a 2026 community source's worked examples use an [inversion-fvg](../06-fair-value-gaps/inversion-fvg.md) (iFVG) on the M15 entry TF as often as a plain FVG — treat both as valid Internal Range Liquidity entry references alongside Order Block and Liquidity Void.
 
 ## Formula / Math
 
@@ -44,9 +47,9 @@ london_judas := session == London_Open_KZ [02:00, 05:00] NY
   "timeframes": ["M1","M5","M15"],
   "confidence": "high",
   "year_introduced": "2018",
-  "year_refined": "2022",
-  "related": ["judas-swing","ny-judas-swing","judas-swing-failure","london-open-killzone","asian-range","asian-range-sweep","macro-time-0250-0310"],
-  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "year_refined": "2026",
+  "related": ["judas-swing","ny-judas-swing","judas-swing-failure","london-open-killzone","asian-range","asian-range-sweep","macro-time-0250-0310","true-day-open","inversion-fvg"],
+  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-JUDAS-SWING"]
 }
 ```
 
@@ -101,7 +104,10 @@ M1 / M5 / M15.
 ## Related Concepts
 
 - [judas-swing](judas-swing.md), [ny-judas-swing](ny-judas-swing.md), [judas-swing-failure](judas-swing-failure.md), [london-open-killzone](../10-killzones/london-open-killzone.md), [asian-range](../14-asian-range/asian-range.md), [asian-range-sweep](../14-asian-range/asian-range-sweep.md), [macro-time-0250-0310](../04-time-cycles/macro-time-0250-0310.md).
+- [true-day-open](../22-quarterly-theory/true-day-open.md) — the midnight IPDA reset that anchors the window's start; see the three-session-overlap rationale above.
+- [inversion-fvg](../06-fair-value-gaps/inversion-fvg.md) — iFVG used as the entry array alongside plain FVG in worked examples.
 
 ## Citations
 
 - `ICT-2017-CHARTER-OVERVIEW`, `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `THAI-COMMUNITY-2026-JUDAS-SWING` — three-session-overlap rationale for the Judas window, p.275; iFVG used as entry array in worked London Judas examples, pp.276, 279.

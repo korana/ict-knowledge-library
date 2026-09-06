@@ -4,8 +4,8 @@
 **Aliases:** displacement quality, displacement scoring, strong vs weak displacement
 **ICT Confidence:** high
 **Year Introduced:** 2017
-**Year Refined:** 2024
-**Source IDs:** ICT-2017-DISPLACEMENT, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2017-DISPLACEMENT, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-FVG
 **Tags:** displacement, scoring, quality
 
 ## Definition
@@ -58,9 +58,9 @@ displacement_score(candle) = sum([
   "timeframes": ["M5","M15","H1","H4","D"],
   "confidence": "high",
   "year_introduced": "2017",
-  "year_refined": "2024",
-  "related": ["displacement-definition","bullish-displacement","bearish-displacement","displacement-and-fvg","fair-value-gap"],
-  "sources": ["ICT-2017-DISPLACEMENT","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "year_refined": "2026",
+  "related": ["displacement-definition","bullish-displacement","bearish-displacement","displacement-and-fvg","fair-value-gap","equilibrium-definition"],
+  "sources": ["ICT-2017-DISPLACEMENT","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-FVG"]
 }
 ```
 
@@ -100,11 +100,14 @@ M5–D.
 - **Single-factor scoring.** Body/range alone doesn't capture displacement quality; use all 5 factors.
 - **Treating wide-but-wicked candles as strong.** A 90%-body candle with 20% upper wick is moderate, not strong.
 - **Ignoring follow-through.** A "strong" displacement that immediately reverses isn't really strong — follow-through is part of the signature.
+- **Treating the "Mother Bar" framing as a replacement for this scoring (2026 community source).** `THAI-COMMUNITY-2026-FVG` calls a body ≥85%/near-zero-wick candle an "Engulfing/Marubozu" candle and nests a Trading Range (Mother Bar = Inside Bar range, 50% = Equilibrium/entry) inside it — see [equilibrium-definition](../27-equilibrium/equilibrium-definition.md). That framing describes *where to enter within* a qualifying candle; it doesn't substitute for scoring *whether* the candle qualifies as strong displacement in the first place — use both together, not one instead of the other.
 
 ## Related Concepts
 
 - [displacement-definition](displacement-definition.md), [bullish-displacement](bullish-displacement.md), [bearish-displacement](bearish-displacement.md), [displacement-and-fvg](displacement-and-fvg.md), [fair-value-gap](../06-fair-value-gaps/fair-value-gap.md).
+- [equilibrium-definition](../27-equilibrium/equilibrium-definition.md) — where the "Mother Bar" displacement-candle EQ framing is documented.
 
 ## Citations
 
 - `ICT-2017-DISPLACEMENT`, `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `THAI-COMMUNITY-2026-FVG` — "Engulfing/Marubozu" naming and Mother Bar/Trading Range framing, pp. 101–106.

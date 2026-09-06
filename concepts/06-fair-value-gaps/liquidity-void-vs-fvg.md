@@ -4,8 +4,8 @@
 **Aliases:** none (disambiguation page)
 **ICT Confidence:** high
 **Year Introduced:** 2017
-**Year Refined:** 2022
-**Source IDs:** ICT-2017-DISPLACEMENT, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2017-DISPLACEMENT, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-LIQUIDITY-VOID
 **Tags:** fvg, liquidity-void, disambiguation, terminology
 
 ## Definition
@@ -67,9 +67,9 @@ contained_fvgs_in_void(void) := { fvg | fvg.range ⊂ void.range }
   "timeframes": ["M5","M15","H1","H4","D"],
   "confidence": "high",
   "year_introduced": "2017",
-  "year_refined": "2022",
+  "year_refined": "2026",
   "related": ["fair-value-gap","liquidity-void","imbalance-definition","displacement-definition","range-expansion"],
-  "sources": ["ICT-2017-DISPLACEMENT","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "sources": ["ICT-2017-DISPLACEMENT","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-LIQUIDITY-VOID"]
 }
 ```
 
@@ -118,6 +118,7 @@ All TFs.
 - **Treating a wide expansion as a single "FVG."** A 5-bar expansion is a void; the FVGs are the specific 3-candle patterns inside it.
 - **Treating a 3-candle FVG as a void.** An FVG alone, without surrounding multi-bar expansion, is just an FVG.
 - **Demanding voids fill completely.** Voids often partially rebalance via internal FVG fills without fully closing.
+- **Assuming neither exists just because the HTF chart shows nothing.** Both are scale-dependent: a structural break that leaves no visible void or FVG on your working timeframe often shows one on a lower TF (per `THAI-COMMUNITY-2026-LIQUIDITY-VOID`, p.130). If a lower-TF check still finds neither, fall back to Old High/Low as the draw on liquidity instead of forcing a void/FVG read that isn't there.
 
 ## Related Concepts
 
@@ -126,3 +127,4 @@ All TFs.
 ## Citations
 
 - `ICT-2017-DISPLACEMENT`, `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `THAI-COMMUNITY-2026-LIQUIDITY-VOID` — scale-dependence / lower-TF fallback note, p.130.

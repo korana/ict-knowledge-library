@@ -4,8 +4,8 @@
 **Aliases:** IRL, internal liquidity, intra-range liquidity
 **ICT Confidence:** high
 **Year Introduced:** 2022
-**Year Refined:** 2022
-**Source IDs:** ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-IRL-ERL, THAI-COMMUNITY-2026-TRADE-SETUP
 **Tags:** liquidity, irl, internal, dealing-range
 
 ## Definition
@@ -19,6 +19,7 @@ Internal Range Liquidity is liquidity (PD arrays, internal swing pivots, FVGs, O
   - Internal swing highs / lows ([internal-structure](../01-market-structure/internal-structure.md)).
   - FVGs whose price range falls inside the dealing range bounds.
   - Order blocks whose price range falls inside the bounds.
+  - [Liquidity voids](liquidity-void.md) whose price range falls inside the bounds.
   - Internal trendline liquidity (touches all inside the range).
 - An IRL target taken does NOT flip HTF bias by itself — only ERL takes do.
 
@@ -47,9 +48,9 @@ is_ERL(level) := level >= LTH_ext OR level <= LTL_ext
   "timeframes": ["M5","M15","H1","H4","D"],
   "confidence": "high",
   "year_introduced": "2022",
-  "year_refined": "2022",
-  "related": ["external-range-liquidity","internal-structure","fair-value-gap","draw-on-liquidity","dealing-range","liquidity-pool"],
-  "sources": ["ICT-2022-MENTORSHIP-OVERVIEW"]
+  "year_refined": "2026",
+  "related": ["external-range-liquidity","internal-structure","fair-value-gap","liquidity-void","draw-on-liquidity","dealing-range","liquidity-pool","inducement"],
+  "sources": ["ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-IRL-ERL","THAI-COMMUNITY-2026-TRADE-SETUP"]
 }
 ```
 
@@ -91,9 +92,13 @@ Most operational on H1+ where dealing ranges are coherent. On M1/M5 the LTH/LTL 
 - [external-range-liquidity](external-range-liquidity.md) — counterpart.
 - [internal-structure](../01-market-structure/internal-structure.md) — internal swings are IRL.
 - [fair-value-gap](../06-fair-value-gaps/fair-value-gap.md) — most common IRL form.
+- [liquidity-void](liquidity-void.md) — another IRL form.
 - [draw-on-liquidity](draw-on-liquidity.md) — IRL/ERL distinction shapes draw selection.
 - [dealing-range](../05-pd-arrays/dealing-range.md) — the bounded zone.
+- [inducement](inducement.md) — a 2026 community source's SMC-borrowed name for internal SSL/BSL swept as a trap before the real entry; same mechanic as this file's IRL, translated from a different vocabulary.
 
 ## Citations
 
 - `ICT-2022-MENTORSHIP-OVERVIEW` — IRL/ERL distinction formalized in 2022 mentorship.
+- `THAI-COMMUNITY-2026-IRL-ERL` — Liquidity Void explicitly named as an IRL form alongside FVG/OB, pp.332, 345–346.
+- `THAI-COMMUNITY-2026-TRADE-SETUP` — "Inducement" as SMC's name for this file's internal SSL/BSL, p.587.

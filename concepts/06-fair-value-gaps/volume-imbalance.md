@@ -4,8 +4,8 @@
 **Aliases:** VI, body imbalance, volume gap
 **ICT Confidence:** high
 **Year Introduced:** 2018
-**Year Refined:** 2022
-**Source IDs:** ICT-2017-DISPLACEMENT, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2017-DISPLACEMENT, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-FVG-TECHNIQUE
 **Tags:** fvg, volume-imbalance, body-gap
 
 ## Definition
@@ -49,9 +49,9 @@ vi_size       := vi_high - vi_low
   "timeframes": ["M5","M15","H1","H4","D"],
   "confidence": "high",
   "year_introduced": "2018",
-  "year_refined": "2022",
-  "related": ["fair-value-gap","imbalance-vs-fvg","volume-imbalance-detail","imbalance-definition","displacement-definition"],
-  "sources": ["ICT-2017-DISPLACEMENT","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "year_refined": "2026",
+  "related": ["fair-value-gap","imbalance-vs-fvg","volume-imbalance-detail","imbalance-definition","displacement-definition","nwog"],
+  "sources": ["ICT-2017-DISPLACEMENT","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-FVG-TECHNIQUE"]
 }
 ```
 
@@ -88,11 +88,15 @@ M5+. M1 VIs are micro-noise.
 
 - **Calling VI an FVG.** They're different patterns; VIs have overlapping wicks.
 - **Tiny gaps from feed noise.** Sub-tick VIs are not real; filter by ATR.
+- **Treating VI as only meaningful on HTF.** A 2026 community source (`THAI-COMMUNITY-2026-FVG-TECHNIQUE`) recommends confining VI use to Daily/Weekly/Monthly and explicitly advises against H4-and-below — a practitioner preference for signal cleanliness, not an ICT restriction. This file's M5+ scope stands; treat "HTF-only" as this source's own operating choice, not a correction.
+- **Missing the NWOG connection.** A weekly VI at the Friday-close-to-Sunday-open boundary is the same geometry as [nwog](../31-models/nwog.md) — NWOG is a specific, named instance of this pattern, not a separate concept from VI.
 
 ## Related Concepts
 
 - [fair-value-gap](fair-value-gap.md), [imbalance-vs-fvg](../26-imbalance/imbalance-vs-fvg.md), [volume-imbalance-detail](../26-imbalance/volume-imbalance-detail.md), [imbalance-definition](../26-imbalance/imbalance-definition.md), [displacement-definition](../09-displacement/displacement-definition.md).
+- [nwog](../31-models/nwog.md) — the weekly-boundary instance of this same VI geometry.
 
 ## Citations
 
 - `ICT-2017-DISPLACEMENT`, `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `THAI-COMMUNITY-2026-FVG-TECHNIQUE` — HTF-preference note and NWOG equivalence claim, pp. 168–174.

@@ -4,8 +4,8 @@
 **Aliases:** TDO, midnight open, daily true open
 **ICT Confidence:** high
 **Year Introduced:** 2017
-**Year Refined:** 2023
-**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2023-QUARTERLY-THEORY
+**Year Refined:** 2026
+**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2023-QUARTERLY-THEORY, THAI-COMMUNITY-2026-JUDAS-SWING
 **Tags:** quarterly-theory, true-day-open, foundational
 
 ## Definition
@@ -47,9 +47,9 @@ bearish_bias_setup_zone := price > tdo (intraday premium in bearish bias)
   "timeframes": ["M5","M15","H1","H4"],
   "confidence": "high",
   "year_introduced": "2017",
-  "year_refined": "2023",
-  "related": ["quarterly-theory-overview","daily-quarters","time-of-day-pivots","ndog","true-week-open","htf-bias-framework"],
-  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2023-QUARTERLY-THEORY"]
+  "year_refined": "2026",
+  "related": ["quarterly-theory-overview","daily-quarters","time-of-day-pivots","ndog","true-week-open","htf-bias-framework","london-judas-swing"],
+  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2023-QUARTERLY-THEORY","THAI-COMMUNITY-2026-JUDAS-SWING"]
 }
 ```
 
@@ -83,11 +83,14 @@ M5 / M15 / H1 / H4.
 - **Using broker time as TDO.** If broker's daily candle opens at 17:00 NY (forex) or some other server-time, that is NOT the TDO; recompute the 00:00 NY open.
 - **Confusing TDO with 17:00 NY close.** TDO is the open, not the close.
 - **Ignoring TDO for intraday bias.** Many intraday traders skip TDO and use only daily range EQ; combining both is stronger.
+- **Missing TDO's role in the Judas Swing window.** A 2026 community source frames TDO's 00:00 NY reset as the anchor point of a three-session overlap (NY midnight reset, London open, Tokyo/Asian close) that explains why the [london-judas-swing](../13-judas-swing/london-judas-swing.md) window forms where it does.
 
 ## Related Concepts
 
 - [quarterly-theory-overview](quarterly-theory-overview.md), [daily-quarters](daily-quarters.md), [time-of-day-pivots](../04-time-cycles/time-of-day-pivots.md), [ndog](../31-models/ndog.md), [true-week-open](true-week-open.md), [htf-bias-framework](../25-htf-bias/htf-bias-framework.md).
+- [london-judas-swing](../13-judas-swing/london-judas-swing.md) — TDO's role as the anchor of the three-session-overlap Judas window rationale.
 
 ## Citations
 
 - `ICT-2017-CHARTER-OVERVIEW`, `ICT-2023-QUARTERLY-THEORY`.
+- `THAI-COMMUNITY-2026-JUDAS-SWING` — TDO/midnight IPDA reset cited as the anchor of the three-session-overlap rationale, p.275.

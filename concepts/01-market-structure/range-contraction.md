@@ -83,6 +83,7 @@ All M5 → D. HTF contractions (D / H4) often last days and produce the largest 
 
 ## Related Concepts
 
+- [price-delivery-cycle](price-delivery-cycle.md) — the full 4-state cycle this phase belongs to.
 - [range-expansion](range-expansion.md) — what follows a contraction.
 - [accumulation-phase](../12-power-of-three/accumulation-phase.md) — the AMD-cycle equivalent.
 - [equal-highs](../02-liquidity/equal-highs.md) / [equal-lows](../02-liquidity/equal-lows.md) — what forms at the bounds.

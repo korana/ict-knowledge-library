@@ -4,8 +4,8 @@
 **Aliases:** none (disambiguation page)
 **ICT Confidence:** high
 **Year Introduced:** 2018
-**Year Refined:** 2022
-**Source IDs:** ICT-2018-BLOCKS, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2018-BLOCKS, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-MITIGATION-BLOCK, THAI-COMMUNITY-2026-BREAKER-BLOCK
 **Tags:** breaker, mitigation, disambiguation, terminology
 
 ## Definition
@@ -17,6 +17,10 @@ Breaker blocks and mitigation blocks are often confused in ICT discussion. Both 
 - **Mitigation block** = OB violated as part of a **BOS** (no polarity flip; trend continues).
 
 Same retest geometry, different structural meaning. The distinction matters because breakers are reversal-context references while mitigation blocks are continuation references.
+
+> **Note (2026):** this page assumes the ICT-2018-BLOCKS reading of "Mitigation Block" (continuation, no polarity flip). A separate community source uses the same term for a reversal-anchored object instead — see [mitigation-block](mitigation-block.md)'s `## ICT vs Community` section, which now carries a `disputed` confidence rating, before applying this disambiguation.
+>
+> **Note (2026), reaction speed:** that same community source (`THAI-COMMUNITY-2026-BREAKER-BLOCK`, p.63), speaking of its own reversal-anchored Mitigation Block reading and its ICT-based Breaker Block, states the Breaker Block reacts **slower** than its Mitigation Block "because Mitigation Block gets a bonus effect from the Failure Swing itself" — i.e. in that source's own model the Mitigation Block's reaction is boosted by the Failure Swing pattern that precedes it, while its Breaker Block has no equivalent boost. This is the author's own observation about his two reversal-anchored constructs, not a claim about the ICT-2018-BLOCKS continuation reading of Mitigation Block on this page.
 
 ## Formal Criteria
 
@@ -66,9 +70,9 @@ classify(ob_violated):
   "timeframes": ["M15","H1","H4","D"],
   "confidence": "high",
   "year_introduced": "2018",
-  "year_refined": "2022",
-  "related": ["breaker-block","bullish-breaker","bearish-breaker","mitigation-block","bullish-order-block","bearish-order-block","choch-bullish","choch-bearish","bos-bullish","bos-bearish"],
-  "sources": ["ICT-2018-BLOCKS","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "year_refined": "2026",
+  "related": ["breaker-block","bullish-breaker","bearish-breaker","mitigation-block","bullish-order-block","bearish-order-block","choch-bullish","choch-bearish","bos-bullish","bos-bearish","reversal-order-block"],
+  "sources": ["ICT-2018-BLOCKS","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-MITIGATION-BLOCK","THAI-COMMUNITY-2026-BREAKER-BLOCK"]
 }
 ```
 
@@ -113,9 +117,11 @@ M15+.
 ## Related Concepts
 
 - [breaker-block](breaker-block.md), [bullish-breaker](bullish-breaker.md), [bearish-breaker](bearish-breaker.md), [mitigation-block](mitigation-block.md).
-- [bullish-order-block](../07-order-blocks/bullish-order-block.md), [bearish-order-block](../07-order-blocks/bearish-order-block.md).
+- [bullish-order-block](../07-order-blocks/bullish-order-block.md), [bearish-order-block](../07-order-blocks/bearish-order-block.md), [reversal-order-block](../07-order-blocks/reversal-order-block.md).
 - [choch-bullish](../01-market-structure/choch-bullish.md), [choch-bearish](../01-market-structure/choch-bearish.md), [bos-bullish](../01-market-structure/bos-bullish.md), [bos-bearish](../01-market-structure/bos-bearish.md).
 
 ## Citations
 
 - `ICT-2018-BLOCKS`, `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `THAI-COMMUNITY-2026-MITIGATION-BLOCK` — source of the disputed alternate "Mitigation Block" reading flagged above.
+- `THAI-COMMUNITY-2026-BREAKER-BLOCK` — p.63, "Breaker Block reacts slower than Mitigation Block" observation flagged above.

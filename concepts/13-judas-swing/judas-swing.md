@@ -4,8 +4,8 @@
 **Aliases:** Judas, opening Judas, false-direction open, betrayal swing
 **ICT Confidence:** high
 **Year Introduced:** 2018
-**Year Refined:** 2022
-**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-TURTLE-SOUP
 **Tags:** judas, manipulation, sweep, foundational
 
 ## Definition
@@ -51,9 +51,9 @@ judas_swing(session) :=
   "timeframes": ["M1","M5","M15"],
   "confidence": "high",
   "year_introduced": "2018",
-  "year_refined": "2022",
-  "related": ["london-judas-swing","ny-judas-swing","judas-swing-failure","manipulation-phase","liquidity-sweep","asian-range-sweep","power-of-three"],
-  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "year_refined": "2026",
+  "related": ["london-judas-swing","ny-judas-swing","judas-swing-failure","manipulation-phase","liquidity-sweep","asian-range-sweep","power-of-three","turtle-soup"],
+  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-TURTLE-SOUP"]
 }
 ```
 
@@ -95,6 +95,7 @@ M1 / M5 / M15 — the Judas itself usually plays out in the first 15–60 minute
 - **No bias filter.** A Judas swing without HTF bias confirmation is just chop. The reversal direction MUST agree with HTF.
 - **Wrong session.** Judas usually means "London open Judas." NY AM has a smaller-scale Judas; PM session sometimes has a lunch-Judas. Specify which.
 - **Late identification.** By the time the Judas + reversal + FVG are all visible, the high-conviction entry window may have closed; entries on FVG retest are the standard play.
+- **Treating "Judas Swing" and "Turtle Soup" as different patterns.** A 2026 community source states they're the same underlying sweep-and-reverse behavior — the name used depends only on whether the sweep falls inside this file's 02:00–05:00 NY timing window (Judas Swing) or occurs elsewhere/on a non-session-anchored setup ([turtle-soup](../20-turtle-soup/turtle-soup.md)).
 
 ## Related Concepts
 
@@ -102,8 +103,10 @@ M1 / M5 / M15 — the Judas itself usually plays out in the first 15–60 minute
 - [manipulation-phase](../12-power-of-three/manipulation-phase.md), [power-of-three](../12-power-of-three/power-of-three.md) — broader AMD framing.
 - [liquidity-sweep](../02-liquidity/liquidity-sweep.md), [asian-range-sweep](../14-asian-range/asian-range-sweep.md) — sweep mechanics.
 - [london-open-killzone](../10-killzones/london-open-killzone.md), [ny-am-killzone](../10-killzones/ny-am-killzone.md) — typical killzones.
+- [turtle-soup](../20-turtle-soup/turtle-soup.md) — same underlying behavior outside the Judas timing window; see Common Mistakes.
 
 ## Citations
 
 - `ICT-2017-CHARTER-OVERVIEW` — Judas swing terminology refined.
 - `ICT-2022-MENTORSHIP-OVERVIEW` — operational framework for Judas + reversal entry.
+- `THAI-COMMUNITY-2026-TURTLE-SOUP` — Turtle Soup/Judas Swing named-by-timing-window equivalence, p.269.

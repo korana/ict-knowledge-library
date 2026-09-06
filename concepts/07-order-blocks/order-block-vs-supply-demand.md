@@ -4,8 +4,8 @@
 **Aliases:** none (disambiguation page)
 **ICT Confidence:** high
 **Year Introduced:** 2016
-**Year Refined:** 2022
-**Source IDs:** ICT-2016-OB-INTRO, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2016-OB-INTRO, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-ORDER-BLOCK
 **Tags:** order-block, supply-demand, disambiguation, terminology
 
 ## Definition
@@ -26,6 +26,14 @@ OBs are precise points; S/D zones are areas. The two often overlap geometrically
 - Zone width = high-to-low of the consolidation (often 3–10+ candles).
 - "Drop-Base-Rally" (DBR) for demand, "Rally-Base-Drop" (RBD) for supply.
 - Often graded as "fresh" / "tested" similar to OBs but with looser criteria.
+- **Full 4-pattern taxonomy (community-attributed):** a 2026 community source names the complete classic Base taxonomy, spanning both reversal and continuation Bases:
+  - **Reversal:** Rally-Base-**Drop** (RBD, supply) / Drop-Base-**Rally** (DBR, demand) — the trend direction changes across the Base.
+  - **Continuation:** Rally-Base-**Rally** (RBR, still demand) / Drop-Base-**Drop** (DBD, still supply) — the trend direction is the same on both sides of the Base.
+  - The "Base" itself is a **Big Candle + Small Candle + Big Candle** sequence — the Base box is drawn around the small candle only, using the small candle's own high/low.
+
+### The OB / Base Location Overlap (community-attributed)
+
+- The same source notes (p.189) that an Order Block and a Base can be boxed at the **same underlying location** on two different timeframes — e.g., a D1 Bearish OB (single candle, wide box) and an H4 Base (small-candle box nested inside it). Switching timeframe to find a valid small-candle Base inside a wider OB can tighten the entry and stop-loss without abandoning the OB framing.
 
 ### ICT Order Block
 
@@ -67,9 +75,9 @@ ob_width <= sd_zone_width
   "timeframes": ["M15","H1","H4","D"],
   "confidence": "high",
   "year_introduced": "2016",
-  "year_refined": "2022",
-  "related": ["order-block-criteria","bullish-order-block","bearish-order-block","mean-threshold","mitigated-order-block"],
-  "sources": ["ICT-2016-OB-INTRO","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "year_refined": "2026",
+  "related": ["order-block-criteria","bullish-order-block","bearish-order-block","mean-threshold","mitigated-order-block","order-block-trading-framework"],
+  "sources": ["ICT-2016-OB-INTRO","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-ORDER-BLOCK"]
 }
 ```
 
@@ -105,11 +113,14 @@ All TFs.
 - **Treating S/D zones as OBs.** Wider zones with looser criteria don't satisfy ICT's structure-break + displacement requirements.
 - **Treating OBs as S/D zones.** Going wider on the OB to "include the wick" turns a precise reference into an arbitrary zone.
 - **Ignoring the structure check.** Without a BOS/CHoCH the candle isn't an OB even if it looks like one.
+- **Assuming RBD/DBR are the only Base patterns.** RBR (Rally-Base-Rally) and DBD (Drop-Base-Drop) are the continuation-side counterparts — same Big-Small-Big candle geometry, but the trend direction doesn't flip across the Base.
 
 ## Related Concepts
 
 - [order-block-criteria](order-block-criteria.md), [bullish-order-block](bullish-order-block.md), [bearish-order-block](bearish-order-block.md), [mean-threshold](../27-equilibrium/mean-threshold.md), [mitigated-order-block](mitigated-order-block.md).
+- [order-block-trading-framework](order-block-trading-framework.md) — uses this Base-boxing convention in its Optimization step.
 
 ## Citations
 
 - `ICT-2016-OB-INTRO`, `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `THAI-COMMUNITY-2026-ORDER-BLOCK` — full RBD/DBR/RBR/DBD taxonomy and OB/Base timeframe-overlap note, pp. 188–189.

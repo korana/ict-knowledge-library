@@ -4,13 +4,13 @@
 **Aliases:** New York AM KZ, NY morning KZ
 **ICT Confidence:** high
 **Year Introduced:** 2016
-**Year Refined:** 2022
-**Source IDs:** ICT-2016-KILLZONES, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2016-KILLZONES, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-NY-KILLZONE
 **Tags:** killzones, ny-am, distribution
 
 ## Definition
 
-The NY AM killzone is the 08:00 → 11:00 NY sub-window of the NY AM session — the **highest-volume killzone of the trading day** because of the overlap with London Close (10:00–12:00 NY). NY AM-KZ contains the 09:50–10:10 macro time and the entirety of the NY AM Silver Bullet (10:00–11:00 NY). It is typically where the daily HOD or LOD is established and where the bulk of the daily candle's body is delivered.
+The NY AM killzone is the 08:00 → 11:00 NY sub-window of the NY AM session — the **highest-volume killzone of the trading day** because of the overlap with London Close (10:00–12:00 NY). NY AM-KZ contains the 09:50–10:10 macro time and the entirety of the NY AM Silver Bullet (10:00–11:00 NY). It is typically where the daily HOD or LOD is established and where the bulk of the daily candle's body is delivered. Behaviorally it is **continuation or reversal of what London delivered** — a 2026 community source frames NY AM-KZ's two possible modes as (1) Retracement & Continue, a pause-then-resumption of the trend London's session established, or (2) Reversal against it, matching the same continuation-or-reversal duality already documented for [ny-pm-killzone](ny-pm-killzone.md) (continuation/reversal of the AM trend) and [london-session](../15-sessions/london-session.md)'s own close window (continuation/reversal of London open's move) — this file was the one gap in that otherwise-consistent pattern across sibling files.
 
 ## Formal Criteria
 
@@ -44,9 +44,9 @@ overlaps_london_close = [10:00, 11:00] NY
   "timeframes": ["M1","M5","M15"],
   "confidence": "high",
   "year_introduced": "2016",
-  "year_refined": "2022",
-  "related": ["killzone-overview","ny-am-session","london-close","silver-bullet-ny-am","macro-time-0950-1010","distribution-phase"],
-  "sources": ["ICT-2016-KILLZONES","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "year_refined": "2026",
+  "related": ["killzone-overview","ny-am-session","london-close","silver-bullet-ny-am","macro-time-0950-1010","distribution-phase","ny-pm-killzone","london-session"],
+  "sources": ["ICT-2016-KILLZONES","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-NY-KILLZONE"]
 }
 ```
 
@@ -85,7 +85,9 @@ M1 / M5 / M15. The 08:30 news candle and the 10:00 macro/SB candles often print 
 ## Related Concepts
 
 - [killzone-overview](killzone-overview.md), [ny-am-session](../15-sessions/ny-am-session.md), [london-close](../15-sessions/london-close.md), [silver-bullet-ny-am](../11-silver-bullet/silver-bullet-ny-am.md), [macro-time-0950-1010](../04-time-cycles/macro-time-0950-1010.md), [distribution-phase](../12-power-of-three/distribution-phase.md).
+- [ny-pm-killzone](ny-pm-killzone.md), [london-session](../15-sessions/london-session.md) — the sibling windows whose continuation-or-reversal framing this file now matches.
 
 ## Citations
 
 - `ICT-2016-KILLZONES`, `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `THAI-COMMUNITY-2026-NY-KILLZONE` — continuation-or-reversal-of-London framing (the chapter's own cover-subtitle thesis), p.482.

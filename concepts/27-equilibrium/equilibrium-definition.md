@@ -4,8 +4,8 @@
 **Aliases:** EQ, equilibrium price, mid-range, fair price
 **ICT Confidence:** high
 **Year Introduced:** 2016
-**Year Refined:** 2022
-**Source IDs:** ICT-2016-PD-ARRAYS, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2016-PD-ARRAYS, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-FVG
 **Tags:** equilibrium, eq, foundational
 
 ## Definition
@@ -27,6 +27,7 @@ EQ is computed for:
 - An individual swing leg (range from leg start to leg end).
 - An FVG (where EQ = CE, the FVG's 50% midpoint).
 - An OB (rarely; OB EQ is the body midpoint).
+- **Community-attributed:** a single displacement candle (the "Engulfing/Marubozu" candle — see [displacement-definition](../09-displacement/displacement-definition.md) Common Mistakes). A 2026 community source treats that candle's own high-low range as a miniature dealing range — 50% of it as an entry-grade EQ, its old high/low as alternate entries — nested inside the HTF PD array framework rather than replacing it.
 
 ## Formula / Math
 
@@ -52,9 +53,9 @@ FVG_EQ            = (FVG_high + FVG_low) / 2     # = consequent encroachment
   "timeframes": ["M5","M15","H1","H4","D","W","MN"],
   "confidence": "high",
   "year_introduced": "2016",
-  "year_refined": "2022",
-  "related": ["dealing-range-equilibrium","equilibrium-as-decision-point","mean-threshold","pd-array-definition","premium-array","discount-array","dealing-range","consequent-encroachment"],
-  "sources": ["ICT-2016-PD-ARRAYS","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "year_refined": "2026",
+  "related": ["dealing-range-equilibrium","equilibrium-as-decision-point","mean-threshold","pd-array-definition","premium-array","discount-array","dealing-range","consequent-encroachment","displacement-definition"],
+  "sources": ["ICT-2016-PD-ARRAYS","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-FVG"]
 }
 ```
 
@@ -94,7 +95,9 @@ All TFs.
 - [mean-threshold](mean-threshold.md) — broader mean-reversion concept.
 - [pd-array-definition](../05-pd-arrays/pd-array-definition.md), [premium-array](../05-pd-arrays/premium-array.md), [discount-array](../05-pd-arrays/discount-array.md), [dealing-range](../05-pd-arrays/dealing-range.md).
 - [consequent-encroachment](../06-fair-value-gaps/consequent-encroachment.md) — FVG-scale EQ.
+- [displacement-definition](../09-displacement/displacement-definition.md) — the "Engulfing/Marubozu" candle a 2026 community source treats as a miniature dealing range for this displacement-candle EQ variant.
 
 ## Citations
 
 - `ICT-2016-PD-ARRAYS`, `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `THAI-COMMUNITY-2026-FVG` — displacement-candle EQ (Mother Bar / Trading Range framing), pp. 105–106.

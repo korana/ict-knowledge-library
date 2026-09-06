@@ -4,8 +4,8 @@
 **Aliases:** bullish breaker block, BBB, demand breaker
 **ICT Confidence:** high
 **Year Introduced:** 2017
-**Year Refined:** 2023
-**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-BREAKER-BLOCK
 **Tags:** breaker, bullish
 
 ## Definition
@@ -44,9 +44,9 @@ bullish_breaker_active(ob, retest) := low(retest) reaches high(ob_body)
   "timeframes": ["M15","H1","H4","D"],
   "confidence": "high",
   "year_introduced": "2017",
-  "year_refined": "2023",
+  "year_refined": "2026",
   "related": ["breaker-block","bearish-breaker","bearish-order-block","mitigation-block","failed-breaker","choch-bullish","bos-bullish"],
-  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-BREAKER-BLOCK"]
 }
 ```
 
@@ -76,11 +76,14 @@ M15+.
 - Bullish reaction with FVG up → confirmed bullish breaker.
 - Long at MT 1.0950, SL below OB low at 1.0942 (3-pip buffer). Risk = 8 pips.
 
+**Example 2 (2026) — worked sequence per `THAI-COMMUNITY-2026-BREAKER-BLOCK` pp. 57–60:** HTF bearish; price fails to print a new Lower Low (Failure Swing per Dow Theory), sweeps sell-side liquidity below a recent Equal Low/SSL pool, then breaks above the most recent Lower High — a bullish MSS. The failed bearish OB below that swept low flips to a bullish breaker.
+
 ## Common Mistakes
 
 - **Wick-through.** A wick that pokes above OB high but closes back inside doesn't trigger the breaker.
 - **No displacement.** A drift through the OB without displacement makes the break low-conviction.
 - **Reversed polarity.** A bullish OB doesn't become a bullish breaker — it becomes a bearish one (see [bearish-breaker](bearish-breaker.md)).
+- **Trading a bullish breaker sitting above equilibrium (2026 community source, not an ICT-published gate).** `THAI-COMMUNITY-2026-BREAKER-BLOCK` treats a bullish breaker that isn't in the discount zone as a much weaker candidate (tighter SL required) — see [breaker-block](breaker-block.md)'s Common Mistakes for the full note; this is a conviction modifier, not a formal requirement here.
 
 ## Related Concepts
 
@@ -89,3 +92,4 @@ M15+.
 ## Citations
 
 - `ICT-2017-CHARTER-OVERVIEW`, `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `THAI-COMMUNITY-2026-BREAKER-BLOCK` — worked bullish sequence, pp. 57–60.

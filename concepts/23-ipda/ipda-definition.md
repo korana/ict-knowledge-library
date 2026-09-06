@@ -4,8 +4,8 @@
 **Aliases:** Interbank Price Delivery Algorithm, the algorithm, the algo
 **ICT Confidence:** high
 **Year Introduced:** 2018
-**Year Refined:** 2025
-**Source IDs:** ICT-2018-IPDA, ICT-2022-MENTORSHIP-OVERVIEW, ICT-2025-ADV-LIQUIDITY
+**Year Refined:** 2026
+**Source IDs:** ICT-2018-IPDA, ICT-2022-MENTORSHIP-OVERVIEW, ICT-2025-ADV-LIQUIDITY, THAI-COMMUNITY-2026-SESSION-KILLZONE, THAI-COMMUNITY-2026-CBDR
 **Tags:** ipda, algorithm, foundational
 
 ## Definition
@@ -21,6 +21,7 @@ ICT's claims about IPDA:
 - Delivers price toward liquidity pools (BSL/SSL) using PD arrays as decision points.
 - Rotates between ERL- and IRL-targeting on ~3-4 month cycles (2024–2025 refinement, see [quarterly-shift-theory](../04-time-cycles/quarterly-shift-theory.md)).
 - Operates within session structure: accumulation in Asia, manipulation at session opens, distribution in NY AM.
+- **IPDA Times (community-attributed):** a 2026 community source states the algorithm has a bounded *daily active window*, distinct from the 20/40/60-day lookback tiers above — 00:00 NY (the [true-day-open](../22-quarterly-theory/true-day-open.md) midnight reset) through 15:00 NY, a claimed 15-hour working period, after which the source doesn't describe further algorithmic activity for that day. The close time was initially flagged as ambiguous (an earlier chapter's summary table rendered it as "03:00" NY while its prose said "closes 3pm"/"15 hours"); a later chapter from the same author restates the window as a clean 00:00–15:00 NY IPDA Reset with no table/prose mismatch, resolving the render collision in favor of 15:00 — recorded here accordingly.
 
 The concept is **interpretive**: IPDA is not a publicly documented institutional protocol. ICT's framework treats it as an **explanatory model** for observed price patterns. Confidence is `high` for the *pattern recognition value* of IPDA-as-mental-model; confidence is lower for any literal claim about "the actual algorithm."
 
@@ -56,9 +57,9 @@ IPDA references these to identify untaken liquidity at ERL and IRL.
   "timeframes": ["D","W","MN"],
   "confidence": "high",
   "year_introduced": "2018",
-  "year_refined": "2025",
-  "related": ["ipda-data-ranges","ipda-20-day-lookback","ipda-40-day-lookback","ipda-60-day-lookback","ipda-reference-points","quarterly-shift-theory","internal-range-liquidity","external-range-liquidity","draw-on-liquidity","algorithmic-price-delivery"],
-  "sources": ["ICT-2018-IPDA","ICT-2022-MENTORSHIP-OVERVIEW","ICT-2025-ADV-LIQUIDITY"]
+  "year_refined": "2026",
+  "related": ["ipda-data-ranges","ipda-20-day-lookback","ipda-40-day-lookback","ipda-60-day-lookback","ipda-reference-points","quarterly-shift-theory","internal-range-liquidity","external-range-liquidity","draw-on-liquidity","algorithmic-price-delivery","true-day-open","central-bank-dealing-range"],
+  "sources": ["ICT-2018-IPDA","ICT-2022-MENTORSHIP-OVERVIEW","ICT-2025-ADV-LIQUIDITY","THAI-COMMUNITY-2026-SESSION-KILLZONE","THAI-COMMUNITY-2026-CBDR"]
 }
 ```
 
@@ -101,12 +102,18 @@ D / W / MN are the natural TFs for IPDA-level reference. Lookback ranges are mea
 ## Related Concepts
 
 - [ipda-data-ranges](ipda-data-ranges.md), [ipda-20-day-lookback](ipda-20-day-lookback.md), [ipda-40-day-lookback](ipda-40-day-lookback.md), [ipda-60-day-lookback](ipda-60-day-lookback.md), [ipda-reference-points](ipda-reference-points.md).
+- [market-efficiency-paradigm](market-efficiency-paradigm.md) — who IPDA runs against (Smart Money vs Speculative/Uninformed Money).
+- [price-delivery-cycle](../01-market-structure/price-delivery-cycle.md) — the 4-state behavior cycle IPDA produces.
 - [quarterly-shift-theory](../04-time-cycles/quarterly-shift-theory.md) — IPDA quarterly rotation.
 - [internal-range-liquidity](../02-liquidity/internal-range-liquidity.md), [external-range-liquidity](../02-liquidity/external-range-liquidity.md), [draw-on-liquidity](../02-liquidity/draw-on-liquidity.md).
 - [algorithmic-price-delivery](../03-order-flow/algorithmic-price-delivery.md) — broader framing.
+- [true-day-open](../22-quarterly-theory/true-day-open.md) — the 00:00 NY reset that opens the IPDA Times window.
+- [central-bank-dealing-range](../04-time-cycles/central-bank-dealing-range.md) — a 14:00–20:00 NY reference window that falls inside the claimed IPDA Times active period.
 
 ## Citations
 
 - `ICT-2018-IPDA` — IPDA terminology introduced.
 - `ICT-2022-MENTORSHIP-OVERVIEW` — operational use refined.
 - `ICT-2025-ADV-LIQUIDITY` — quarterly rotation refinement.
+- `THAI-COMMUNITY-2026-SESSION-KILLZONE` — IPDA Times, a bounded 00:00–15:00 NY daily active window, pp.450–451.
+- `THAI-COMMUNITY-2026-CBDR` — clean restatement of the 00:00–15:00 NY IPDA Reset window, resolving the earlier chapter's table/prose render ambiguity in favor of 15:00, p.463.

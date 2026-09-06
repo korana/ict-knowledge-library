@@ -32,6 +32,9 @@ Format: `- [Concept Name](path) — one-line summary`
 - [mss-vs-choch](concepts/01-market-structure/mss-vs-choch.md) — disambiguation page.
 - [range-expansion](concepts/01-market-structure/range-expansion.md) — momentum phase post-breakout.
 - [range-contraction](concepts/01-market-structure/range-contraction.md) — accumulation/consolidation phase.
+- [price-delivery-cycle](concepts/01-market-structure/price-delivery-cycle.md) — 4-state Consolidation/Expansion/Retracement/Reversal state machine with legal-transition rules.
+- [retracement](concepts/01-market-structure/retracement.md) — post-displacement pullback into FVG/Liquidity Void that resumes the original direction.
+- [three-drive-pattern](concepts/01-market-structure/three-drive-pattern.md) — pre-ICT 3-leg reversal structure (Rising/Falling Wedge) into an Old High/Low, community-integrated with sweep + displacement + FVG.
 
 ### 02 — Liquidity
 - [buy-side-liquidity](concepts/02-liquidity/buy-side-liquidity.md) — resting buy stops above price (BSL).
@@ -45,6 +48,7 @@ Format: `- [Concept Name](path) — one-line summary`
 - [liquidity-run](concepts/02-liquidity/liquidity-run.md) — full approach + sweep + resolution sequence.
 - [internal-range-liquidity](concepts/02-liquidity/internal-range-liquidity.md) — liquidity inside the dealing range (IRL).
 - [external-range-liquidity](concepts/02-liquidity/external-range-liquidity.md) — liquidity at/beyond range bounds (ERL).
+- [inducement](concepts/02-liquidity/inducement.md) — SMC-borrowed name for internal SSL/BSL swept as a pre-entry trap (IDM).
 - [draw-on-liquidity](concepts/02-liquidity/draw-on-liquidity.md) — the specific pool the algorithm targets next (DOL).
 - [liquidity-matrix](concepts/02-liquidity/liquidity-matrix.md) — multi-TF map of all pools.
 - [relative-equal-highs-lows](concepts/02-liquidity/relative-equal-highs-lows.md) — within-tolerance EQH/EQL (REH/REL).
@@ -67,6 +71,8 @@ Format: `- [Concept Name](path) — one-line summary`
 - [quarterly-shift-theory](concepts/04-time-cycles/quarterly-shift-theory.md) — fractal time hierarchy + 2024–2025 IPDA quarterly rotation.
 - [time-of-day-pivots](concepts/04-time-cycles/time-of-day-pivots.md) — TDO, 08:30, 09:30, PDH/PDL etc.
 - [dst-handling](concepts/04-time-cycles/dst-handling.md) — DST mismatch + canonical NY-clock anchoring.
+- [central-bank-dealing-range](concepts/04-time-cycles/central-bank-dealing-range.md) — CBDR, 14:00–20:00 NY sideways reference range, next-day projection base.
+- [flout-range](concepts/04-time-cycles/flout-range.md) — combined 14:00–00:00 NY window (CBDR ∪ Asian killzone), same STD mechanic.
 
 ### 05 — PD Arrays
 - [pd-array-definition](concepts/05-pd-arrays/pd-array-definition.md) — umbrella concept for institutional price levels.
@@ -78,6 +84,7 @@ Format: `- [Concept Name](path) — one-line summary`
 - [htf-pd-array-hierarchy](concepts/05-pd-arrays/htf-pd-array-hierarchy.md) — multi-TF top-down array prioritization.
 - [pd-array-matrix](concepts/05-pd-arrays/pd-array-matrix.md) — pre-trade tabular map of PD arrays across TFs.
 - [pd-array-confluence](concepts/05-pd-arrays/pd-array-confluence.md) — multi-factor alignment scoring.
+- [pd-array-stack](concepts/05-pd-arrays/pd-array-stack.md) — community-attributed 7-layer spatial retest ordering from equilibrium outward (not the same as pd-array-hierarchy or pd-array-matrix).
 
 ### 06 — Fair Value Gaps
 - [fair-value-gap](concepts/06-fair-value-gaps/fair-value-gap.md) — canonical 3-candle imbalance.
@@ -90,10 +97,13 @@ Format: `- [Concept Name](path) — one-line summary`
 - [volume-imbalance](concepts/06-fair-value-gaps/volume-imbalance.md) — body-vs-body gap.
 - [immediate-rebalance-fvg](concepts/06-fair-value-gaps/immediate-rebalance-fvg.md) — fills within 1-3 bars.
 - [delayed-rebalance-fvg](concepts/06-fair-value-gaps/delayed-rebalance-fvg.md) — stays unfilled 5+ bars.
+- [reaper-pd-array](concepts/06-fair-value-gaps/reaper-pd-array.md) — community-attributed; FVG ignored on 1st retest, reacts on 2nd after a double BSL/SSL sweep.
+- [redelivery-rebalance](concepts/06-fair-value-gaps/redelivery-rebalance.md) — community-attributed; RDRB, 3-candle repricing zone within a directional run.
 - [fvg-classification-2025](concepts/06-fair-value-gaps/fvg-classification-2025.md) — immediate/delayed taxonomy.
 - [liquidity-void-vs-fvg](concepts/06-fair-value-gaps/liquidity-void-vs-fvg.md) — disambiguation.
 - [fvg-mitigation](concepts/06-fair-value-gaps/fvg-mitigation.md) — fresh/partial/mitigated state.
 - [nested-fvg](concepts/06-fair-value-gaps/nested-fvg.md) — multi-TF FVG nesting.
+- [fvg-setup-checklist](concepts/06-fair-value-gaps/fvg-setup-checklist.md) — community-attributed 3-part filter: Sweep Liquidity + Displacement + MSS.
 
 ### 07 — Order Blocks
 - [bullish-order-block](concepts/07-order-blocks/bullish-order-block.md) — last bearish candle before bullish displacement+BOS.
@@ -106,12 +116,14 @@ Format: `- [Concept Name](path) — one-line summary`
 - [reversal-order-block](concepts/07-order-blocks/reversal-order-block.md) — OB at CHoCH/MSS pivot.
 - [continuation-order-block](concepts/07-order-blocks/continuation-order-block.md) — OB at BOS pivot in trend.
 - [order-block-vs-supply-demand](concepts/07-order-blocks/order-block-vs-supply-demand.md) — disambiguation.
+- [cisd](concepts/07-order-blocks/cisd.md) — community-attributed; Change In State Of Delivery, an open-price-line "Rare Order Block."
+- [order-block-trading-framework](concepts/07-order-blocks/order-block-trading-framework.md) — community-attributed; 5-step POI→Optimization→Observation→Entry→Stoploss pipeline.
 
 ### 08 — Breaker Blocks
 - [breaker-block](concepts/08-breaker-blocks/breaker-block.md) — failed OB whose polarity flips.
 - [bullish-breaker](concepts/08-breaker-blocks/bullish-breaker.md) — failed bearish OB → support.
 - [bearish-breaker](concepts/08-breaker-blocks/bearish-breaker.md) — failed bullish OB → resistance.
-- [mitigation-block](concepts/08-breaker-blocks/mitigation-block.md) — violated OB without polarity flip (BOS context).
+- [mitigation-block](concepts/08-breaker-blocks/mitigation-block.md) — disputed term: violated OB without polarity flip (BOS context, ICT-2018) vs. a reversal-anchored community reading — see file's ICT vs Community section.
 - [breaker-vs-mitigation](concepts/08-breaker-blocks/breaker-vs-mitigation.md) — disambiguation.
 - [failed-breaker](concepts/08-breaker-blocks/failed-breaker.md) — breaker that fails on retest.
 
@@ -134,7 +146,7 @@ Format: `- [Concept Name](path) — one-line summary`
 
 ### 11 — Silver Bullet
 - [silver-bullet-overview](concepts/11-silver-bullet/silver-bullet-overview.md) — three SB windows, sweep+displacement+FVG framework.
-- [silver-bullet-london](concepts/11-silver-bullet/silver-bullet-london.md) — 03:00–04:00 NY.
+- [silver-bullet-london](concepts/11-silver-bullet/silver-bullet-london.md) — 02:00–03:00 NY.
 - [silver-bullet-ny-am](concepts/11-silver-bullet/silver-bullet-ny-am.md) — 10:00–11:00 NY (highest probability).
 - [silver-bullet-ny-pm](concepts/11-silver-bullet/silver-bullet-ny-pm.md) — 14:00–15:00 NY (lowest).
 - [silver-bullet-rules](concepts/11-silver-bullet/silver-bullet-rules.md) — 8-point checklist.
@@ -215,6 +227,7 @@ Format: `- [Concept Name](path) — one-line summary`
 - [yearly-quarters](concepts/22-quarterly-theory/yearly-quarters.md) — annual AMD-X.
 - [monthly-quarters](concepts/22-quarterly-theory/monthly-quarters.md) — week-of-month AMD-X.
 - [weekly-quarters](concepts/22-quarterly-theory/weekly-quarters.md) — Mon-Tue-Wed-Thu AMD-X.
+- [weekly-profile-patterns](concepts/22-quarterly-theory/weekly-profile-patterns.md) — six named weekly-candle shapes.
 - [daily-quarters](concepts/22-quarterly-theory/daily-quarters.md) — 6-hour NY blocks.
 - [90-minute-quarters](concepts/22-quarterly-theory/90-minute-quarters.md) — 22.5-min mini-quarters.
 - [true-day-open](concepts/22-quarterly-theory/true-day-open.md) — TDO at 00:00 NY.
@@ -228,6 +241,7 @@ Format: `- [Concept Name](path) — one-line summary`
 - [ipda-40-day-lookback](concepts/23-ipda/ipda-40-day-lookback.md) — mid-horizon, ~2 months.
 - [ipda-60-day-lookback](concepts/23-ipda/ipda-60-day-lookback.md) — long-horizon, ~3 months.
 - [ipda-reference-points](concepts/23-ipda/ipda-reference-points.md) — 5-tier reference grid.
+- [market-efficiency-paradigm](concepts/23-ipda/market-efficiency-paradigm.md) — Smart Money Diagram: Liquidity Provider vs Speculative/Uninformed Money, mediated by the algorithm.
 
 ### 24 — AMD Cycle
 - [amd-cycle-overview](concepts/24-amd-cycle/amd-cycle-overview.md) — cycle as repeating temporal pattern.
@@ -282,6 +296,7 @@ Format: `- [Concept Name](path) — one-line summary`
 - [ict-2022-model](concepts/31-models/ict-2022-model.md) — flagship multi-step setup framework.
 - [ict-2023-model](concepts/31-models/ict-2023-model.md) — Quarterly Theory + macro integration refinements.
 - [ict-2024-model](concepts/31-models/ict-2024-model.md) — FVG classification + IFVG + propulsion refinements.
+- [market-maker-model](concepts/31-models/market-maker-model.md) — 6-state MMBM/MMSM cycle: Original Consolidation → Distribution/Accumulation pairs → Smart Money Reversal → opposite HTF pool.
 - [unicorn-model](concepts/31-models/unicorn-model.md) — rare A++ confluence: breaker + nested FVG + bias + sweep.
 - [bread-and-butter-setup](concepts/31-models/bread-and-butter-setup.md) — the recurring daily delivery sequence.
 - [diamond-pattern](concepts/31-models/diamond-pattern.md) — double-sweep consolidation breakout.
@@ -293,6 +308,7 @@ Format: `- [Concept Name](path) — one-line summary`
 - [sunday-open-gap](concepts/31-models/sunday-open-gap.md) — 18:00 NY Sunday open event.
 - [venom-model](concepts/31-models/venom-model.md) — Apr 2025; pre-cash-open range fake-breakout for US indices.
 - [zircon-model](concepts/31-models/zircon-model.md) — Jan 2026 silent demo (demo-stage).
+- [tgif-weekly-po3](concepts/31-models/tgif-weekly-po3.md) — Friday weekly PO3 setup, Thursday sweep into HTF FVG retracement (community-attributed, backtested-only).
 
 ### 32 — Risk Management
 - [risk-per-trade](concepts/32-risk-management/risk-per-trade.md) — per-trade % risk discipline.

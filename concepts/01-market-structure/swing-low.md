@@ -4,8 +4,8 @@
 **Aliases:** pivot low, fractal low, short-term low (STL), intermediate-term low (ITL), long-term low (LTL)
 **ICT Confidence:** high
 **Year Introduced:** 2016
-**Year Refined:** 2017
-**Source IDs:** ICT-2016-MENTORSHIP-OVERVIEW, ICT-2017-CHARTER-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2016-MENTORSHIP-OVERVIEW, ICT-2017-CHARTER-OVERVIEW, THAI-COMMUNITY-2026-DAILY-BIAS-SWING-POINT
 **Tags:** structure, pivot, fractal, swing, foundational
 
 ## Definition
@@ -25,6 +25,8 @@ Fractal hierarchy:
 - **Short-Term Low (STL):** any 3-bar swing low.
 - **Intermediate-Term Low (ITL):** an STL whose adjacent STLs are both higher.
 - **Long-Term Low (LTL):** an ITL whose adjacent ITLs are both higher.
+
+**Candle-cluster confirmation (community-attributed alternative).** A 2026 community source, for the specific purpose of validating a swing low as a genuine Daily Bias anchor, requires the swing to be marked by a **3-candle reversal cluster** — a Morning Star, or a Three Inside Up — rather than accepting any bare 3-bar low. Same cluster list as [swing-high](swing-high.md)'s mirror note and the same author's identical technique in [cisd](../07-order-blocks/cisd.md); treat as an added confidence filter for high-stakes anchors (e.g. [daily-bias](../25-htf-bias/daily-bias.md)'s Method 3), not a replacement for the ICT 3-bar definition above.
 
 ## Formula / Math
 
@@ -56,9 +58,9 @@ Where `L_n` is the low (including lower wick) of candle at index `n`.
   "timeframes": ["M1","M5","M15","H1","H4","D","W","MN"],
   "confidence": "high",
   "year_introduced": "2016",
-  "year_refined": "2017",
-  "related": ["swing-high","bos-bearish","choch-bearish","internal-structure","external-structure"],
-  "sources": ["ICT-2016-MENTORSHIP-OVERVIEW","ICT-2017-CHARTER-OVERVIEW"]
+  "year_refined": "2026",
+  "related": ["swing-high","bos-bearish","choch-bearish","internal-structure","external-structure","cisd","daily-bias"],
+  "sources": ["ICT-2016-MENTORSHIP-OVERVIEW","ICT-2017-CHARTER-OVERVIEW","THAI-COMMUNITY-2026-DAILY-BIAS-SWING-POINT"]
 }
 ```
 
@@ -103,8 +105,11 @@ Same as swing-high: applies M1 through MN1. HTF swing lows are structurally heav
 - [choch-bearish](choch-bearish.md) — first close below a swing low after a bullish leg.
 - [equal-lows](../02-liquidity/equal-lows.md) — what two equal-priced lows form.
 - [sell-side-liquidity](../02-liquidity/sell-side-liquidity.md) — stops resting below swing lows.
+- [cisd](../07-order-blocks/cisd.md) — same author's identical 3-candle-cluster list, used there to locate a CISD candle instead of a Daily Bias anchor.
+- [daily-bias](../25-htf-bias/daily-bias.md) — Method 3, the setup this candle-cluster filter serves.
 
 ## Citations
 
 - `ICT-2016-MENTORSHIP-OVERVIEW` — 3-bar swing definition.
 - `ICT-2017-CHARTER-OVERVIEW` — STL / ITL / LTL hierarchy.
+- `THAI-COMMUNITY-2026-DAILY-BIAS-SWING-POINT` — 3-candle cluster (Morning Star / Three Inside Up) as a Daily Bias validity filter, p.429.

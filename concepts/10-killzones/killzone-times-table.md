@@ -4,8 +4,8 @@
 **Aliases:** KZ table, killzone reference card
 **ICT Confidence:** high
 **Year Introduced:** 2016
-**Year Refined:** 2022
-**Source IDs:** ICT-2016-KILLZONES, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2016-KILLZONES, ICT-2022-MENTORSHIP-OVERVIEW, ICT-2026-LONDON-SB-SHIFT, THAI-COMMUNITY-2026-SESSION-KILLZONE
 **Tags:** killzones, reference, table
 
 ## Definition
@@ -19,10 +19,12 @@ The five canonical killzones, with their nested macro and silver-bullet sub-wind
 | Killzone | Window (NY) | Inside it: |
 |---|---|---|
 | Asia | 20:00 – 00:00 | Asian range high/low forming |
-| London Open | 02:00 – 05:00 | macro 02:50–03:10; silver-bullet-london 03:00–04:00 |
+| London Open | 02:00 – 05:00 | macro 02:50–03:10; silver-bullet-london 02:00–03:00 (shifted from 03:00–04:00 in 2026) |
 | NY AM | 08:00 – 11:00 | macro 09:50–10:10; silver-bullet-ny-am 10:00–11:00 |
 | London Close | 10:00 – 12:00 | overlaps NY AM 10:00–11:00; contains silver-bullet-ny-am |
 | NY PM | 13:30 – 16:00 | macro 13:50–14:10; silver-bullet-ny-pm 14:00–15:00; macro 14:50–15:10 |
+
+Adjacent reference window (not a killzone, but sits in the same NY-clock table — see [central-bank-dealing-range](../04-time-cycles/central-bank-dealing-range.md)): **CBDR** (Central Bank Dealing Range), 14:00–20:00 NY, expected sideways/consolidating, used as a next-day price-target projection base. A 2026 community source lists CBDR as one of its own five killzones — a different five-item list than the canonical set above, which uses NY PM in that slot instead.
 
 Macros (precision sub-windows, NY time):
 
@@ -38,7 +40,7 @@ Silver Bullet windows (NY time):
 
 | SB | Window | Inside |
 |---|---|---|
-| London | 03:00 – 04:00 | LO-KZ |
+| London | 02:00 – 03:00 | LO-KZ |
 | NY AM | 10:00 – 11:00 | NY AM-KZ + LC-KZ overlap |
 | NY PM | 14:00 – 15:00 | NY PM-KZ |
 
@@ -59,9 +61,9 @@ See individual concept files; this is a reference table only.
   "timeframes": ["M1","M5","M15","H1"],
   "confidence": "high",
   "year_introduced": "2016",
-  "year_refined": "2022",
-  "related": ["killzone-overview","asia-killzone","london-open-killzone","ny-am-killzone","london-close-killzone","ny-pm-killzone","macro-times-overview","silver-bullet-overview"],
-  "sources": ["ICT-2016-KILLZONES","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "year_refined": "2026",
+  "related": ["killzone-overview","asia-killzone","london-open-killzone","ny-am-killzone","london-close-killzone","ny-pm-killzone","macro-times-overview","silver-bullet-overview","central-bank-dealing-range"],
+  "sources": ["ICT-2016-KILLZONES","ICT-2022-MENTORSHIP-OVERVIEW","ICT-2026-LONDON-SB-SHIFT","THAI-COMMUNITY-2026-SESSION-KILLZONE"]
 }
 ```
 
@@ -83,7 +85,7 @@ See individual concept files; this is a reference table only.
                     10:00 – 12:00
 
 macros: 00:50-01:10, 02:50-03:10, 09:50-10:10, 13:50-14:10, 14:50-15:10
-silver-bullets: 03:00-04:00 (LDN), 10:00-11:00 (NY AM), 14:00-15:00 (NY PM)
+silver-bullets: 02:00-03:00 (LDN, shifted 2026), 10:00-11:00 (NY AM), 14:00-15:00 (NY PM)
 ```
 
 ## Timeframes
@@ -108,7 +110,9 @@ Reference for any TF; the table itself is timeframe-agnostic.
 - Per-killzone files: [asia-killzone](asia-killzone.md), [london-open-killzone](london-open-killzone.md), [ny-am-killzone](ny-am-killzone.md), [london-close-killzone](london-close-killzone.md), [ny-pm-killzone](ny-pm-killzone.md).
 - [macro-times-overview](../04-time-cycles/macro-times-overview.md) — macro deep dive.
 - [silver-bullet-overview](../11-silver-bullet/silver-bullet-overview.md) — SB deep dive.
+- [central-bank-dealing-range](../04-time-cycles/central-bank-dealing-range.md) — adjacent 14:00–20:00 NY reference window on the same table.
 
 ## Citations
 
-- `ICT-2016-KILLZONES`, `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `ICT-2016-KILLZONES`, `ICT-2022-MENTORSHIP-OVERVIEW`, `ICT-2026-LONDON-SB-SHIFT`.
+- `THAI-COMMUNITY-2026-SESSION-KILLZONE` — CBDR added as an adjacent reference window on this table, pp.447–448.

@@ -4,8 +4,8 @@
 **Aliases:** none (this is a disambiguation page)
 **ICT Confidence:** high
 **Year Introduced:** 2017
-**Year Refined:** 2022
-**Source IDs:** ICT-2017-MSS, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2017-MSS, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-MARKET-STRUCTURE, THAI-COMMUNITY-2026-FVG
 **Tags:** structure, disambiguation, mss, choch, terminology
 
 ## Definition
@@ -60,9 +60,9 @@ is_mss(n)   := is_choch(n)
   "timeframes": ["M1","M5","M15","H1","H4","D","W"],
   "confidence": "high",
   "year_introduced": "2017",
-  "year_refined": "2022",
+  "year_refined": "2026",
   "related": ["mss","choch-bullish","choch-bearish","displacement-definition","fair-value-gap"],
-  "sources": ["ICT-2017-MSS","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "sources": ["ICT-2017-MSS","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-MARKET-STRUCTURE","THAI-COMMUNITY-2026-FVG"]
 }
 ```
 
@@ -105,6 +105,21 @@ Both apply on every TF. The distinction matters most on entry timeframes (M5–H
 - **Ignoring the FVG test.** Without the FVG, you have CHoCH at most.
 - **Forgetting the prior-trend dependency.** If the prior trend was already in the same direction as the break, neither term applies — that's a BOS.
 
+## ICT vs Community Breakout Models
+
+In community literature (often grouped under Smart Money Concepts or SMC), the evolution of a breakout is often taught in 4 levels centered around CHoCH:
+- **Level 1:** CHoCH (Change of Character)
+- **Level 2:** CHoCH + BOS
+- **Level 3:** CHoCH + IDM (Inducement) + BOS + Sweep
+- **Level 4:** Buyside/Sellside Liquidity + CHoCH + IDM + BOS + Sweep
+
+Conversely, the strict **ICT Concept** focuses entirely on MSS and displacement, completely discarding the CHoCH terminology. The ICT breakout evolution can be mapped as:
+- **Level 1:** Market Structure Shift (MSS)
+- **Level 2:** Liquidity Sweep + Market Structure Shift + Displacement
+- **Level 3:** Liquidity Sweep + Market Structure Shift + Displacement + CISD (Change In State Of Delivery)
+
+This highlights that ICT does not require subsequent internal breaks (like the SMC "Level 2 BOS" or "IDM") if the initial MSS has strong displacement and leaves an FVG.
+
 ## Related Concepts
 
 - [choch-bullish](choch-bullish.md) / [choch-bearish](choch-bearish.md) — superset.
@@ -117,3 +132,5 @@ Both apply on every TF. The distinction matters most on entry timeframes (M5–H
 
 - `ICT-2017-MSS` — MSS introduced as a stricter form of CHoCH.
 - `ICT-2022-MENTORSHIP-OVERVIEW` — MSS-with-FVG operationalized for live entries.
+- `THAI-COMMUNITY-2026-MARKET-STRUCTURE` — Breakout evolution mapping (SMC 4-level CHoCH vs ICT 3-level MSS).
+- `THAI-COMMUNITY-2026-FVG` — restates the same sweep-precondition distinction independently, pp. 97–99.

@@ -4,8 +4,8 @@
 **Aliases:** PDA confluence, multi-array alignment, confluence stacking
 **ICT Confidence:** high
 **Year Introduced:** 2022
-**Year Refined:** 2025
-**Source IDs:** ICT-2022-MENTORSHIP-OVERVIEW, ICT-2025-ADV-LIQUIDITY
+**Year Refined:** 2026
+**Source IDs:** ICT-2022-MENTORSHIP-OVERVIEW, ICT-2025-ADV-LIQUIDITY, THAI-COMMUNITY-2026-DAILY-BIAS-ORDER-FLOW
 **Tags:** pd-array, confluence, alignment
 
 ## Definition
@@ -25,6 +25,8 @@ Independent confluence factors that ICT teaches:
 7. **Fresh, unmitigated arrays** — preferred over already-tested ones.
 
 A medium-confluence setup has 3–4 factors firing; high-confluence has 5+; low-confluence has 1–2.
+
+**Selection filter within factor 7 (community-attributed):** when several same-side, unmitigated arrays exist inside one dealing range, a 2026 community source narrows "freshness" into an explicit selection procedure: discard any array that formed on the far side of the range's Equilibrium (i.e. before price crossed EQ into the current discount/premium half — those belong to the opposite side's structure) even if price technically respected them, then prefer whichever remaining array sits in confluence with the EQ 50% level itself. The source applies this both to a plain FVG selection and to choosing which of several [inversion-fvg](../06-fair-value-gaps/inversion-fvg.md) candidates to trade — "not every position, even if price respects the FVG."
 
 ## Formula / Math
 
@@ -52,9 +54,9 @@ confluence_score(setup) = sum(1 for factor in factors if active(factor, setup))
   "timeframes": ["M5","M15","H1","H4","D"],
   "confidence": "high",
   "year_introduced": "2022",
-  "year_refined": "2025",
-  "related": ["pd-array-definition","pd-array-hierarchy","pd-array-nesting","htf-pd-array-hierarchy","htf-bias-framework","killzone-overview","macro-times-overview","draw-on-liquidity"],
-  "sources": ["ICT-2022-MENTORSHIP-OVERVIEW","ICT-2025-ADV-LIQUIDITY"]
+  "year_refined": "2026",
+  "related": ["pd-array-definition","pd-array-hierarchy","pd-array-nesting","htf-pd-array-hierarchy","htf-bias-framework","killzone-overview","macro-times-overview","draw-on-liquidity","equilibrium-definition","inversion-fvg"],
+  "sources": ["ICT-2022-MENTORSHIP-OVERVIEW","ICT-2025-ADV-LIQUIDITY","THAI-COMMUNITY-2026-DAILY-BIAS-ORDER-FLOW"]
 }
 ```
 
@@ -104,8 +106,11 @@ Most actionable on entry TFs (M5 / M15) where multiple factors can align. HTF-on
 
 - [pd-array-definition](pd-array-definition.md), [pd-array-hierarchy](pd-array-hierarchy.md), [pd-array-nesting](pd-array-nesting.md), [htf-pd-array-hierarchy](htf-pd-array-hierarchy.md).
 - [htf-bias-framework](../25-htf-bias/htf-bias-framework.md), [killzone-overview](../10-killzones/killzone-overview.md), [macro-times-overview](../04-time-cycles/macro-times-overview.md), [draw-on-liquidity](../02-liquidity/draw-on-liquidity.md).
+- [equilibrium-definition](../27-equilibrium/equilibrium-definition.md) — the EQ-confluence half of the factor-7 selection filter.
+- [inversion-fvg](../06-fair-value-gaps/inversion-fvg.md) — one of the array types the selection filter is applied to.
 
 ## Citations
 
 - `ICT-2022-MENTORSHIP-OVERVIEW` — confluence discipline taught for entry selection.
 - `ICT-2025-ADV-LIQUIDITY` — strengthening principle and multi-factor framing refined in 2025.
+- `THAI-COMMUNITY-2026-DAILY-BIAS-ORDER-FLOW` — EQ-crossing selection filter narrowing factor 7 (discard far-side-of-EQ arrays, prefer EQ-50%-confluent survivor), pp.396, 399.

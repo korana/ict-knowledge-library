@@ -4,8 +4,8 @@
 **Aliases:** BSL, buystops, resting buy orders, liquidity above
 **ICT Confidence:** high
 **Year Introduced:** 2016
-**Year Refined:** 2022
-**Source IDs:** ICT-2016-LIQUIDITY, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2016-LIQUIDITY, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-FVG, THAI-COMMUNITY-2026-OLD-HIGH-LOW, THAI-COMMUNITY-2026-LIQUIDITY-TRADING
 **Tags:** liquidity, buyside, stops, foundational
 
 ## Definition
@@ -19,10 +19,12 @@ BSL accumulates at:
 - The high of any prior swing high (especially STH, ITH, LTH).
 - Equal highs ([equal-highs](equal-highs.md) — two or more swing highs at the same price).
 - Trendline highs (descending series of lower highs that retail traders draw a trendline against).
-- Session highs (Asia high, London high, NY AM high, prior day high, prior week high).
+- Session highs (Asia high, London high, NY AM high, prior day high, prior week high, prior month high).
 - Round-number levels (00, 50) and major figures.
 
 A BSL pool is "taken" when price trades through the level — typically swept with a wick and then reversed (a [liquidity-sweep](liquidity-sweep.md)) or broken through cleanly on a continuation BOS.
+
+A 2026 community source adds a qualifying **approach structure** for the Old High specifically: it prefers to see a series of Lower Highs / Lower Lows in the swings leading into the Old High before treating the eventual sweep as high-conviction, rather than reacting to the first single test.
 
 ## Formula / Math
 
@@ -49,9 +51,9 @@ The set is dynamic: levels enter when a swing high forms; levels leave when they
   "timeframes": ["M1","M5","M15","H1","H4","D","W"],
   "confidence": "high",
   "year_introduced": "2016",
-  "year_refined": "2022",
-  "related": ["sell-side-liquidity","equal-highs","liquidity-sweep","liquidity-pool","draw-on-liquidity","swing-high"],
-  "sources": ["ICT-2016-LIQUIDITY","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "year_refined": "2026",
+  "related": ["sell-side-liquidity","equal-highs","liquidity-sweep","liquidity-pool","draw-on-liquidity","swing-high","three-drive-pattern"],
+  "sources": ["ICT-2016-LIQUIDITY","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-FVG","THAI-COMMUNITY-2026-OLD-HIGH-LOW","THAI-COMMUNITY-2026-LIQUIDITY-TRADING"]
 }
 ```
 
@@ -83,11 +85,16 @@ Every TF. HTF BSL (daily / weekly highs, prior week high) is structurally heavie
 - Prior week high at 1.1100, prior day high at 1.1080, current swing high at 1.1060.
 - A bullish bias targets the 1.1060 → 1.1080 → 1.1100 BSL ladder.
 
+**Example 3 — round-number BSL clustering (gold):**
+- Gold rallies toward 1925, a round figure ending in .00/.50 pattern (also 1900, 1950, 1975, 2000).
+- Retail buy-stop and breakout-buy orders cluster at these levels independent of any swing-high structure, per a 2026 community source — the round number itself is the draw, not a prior high.
+
 ## Common Mistakes
 
 - **Treating any high as BSL.** Tiny noise highs on M1 are technically BSL but rarely meaningful as targets. Filter by structural significance and TF.
 - **Assuming sweep = reversal.** A BSL sweep can either reverse (liquidity raid) or be a step in continuation (the BSL was the "fuel" needed for the next leg up). Read the displacement that follows.
 - **Forgetting the sell-side mirror.** BSL above and SSL below interact; ICT analyses often pair them ("price is between PWH BSL and PWL SSL").
+- **Reacting to the first test of an Old High.** A 2026 community source prefers to see the swing structure leading in first print a series of Lower Highs / Lower Lows before the sweep — see [three-drive-pattern](../01-market-structure/three-drive-pattern.md) for the fuller multi-leg version of this same approach-structure preference.
 
 ## Related Concepts
 
@@ -97,8 +104,12 @@ Every TF. HTF BSL (daily / weekly highs, prior week high) is structurally heavie
 - [liquidity-pool](liquidity-pool.md) — broader concept.
 - [draw-on-liquidity](draw-on-liquidity.md) — BSL is one of the two DOL options.
 - [swing-high](../01-market-structure/swing-high.md) — primary BSL location.
+- [three-drive-pattern](../01-market-structure/three-drive-pattern.md) — the community-attributed multi-leg approach structure into an Old High.
 
 ## Citations
 
 - `ICT-2016-LIQUIDITY` — BSL/SSL terminology introduced in 2016 mentorship.
 - `ICT-2022-MENTORSHIP-OVERVIEW` — operational framing as algorithmic draw.
+- `THAI-COMMUNITY-2026-FVG` — prior month high (PMH) explicitly enumerated alongside PDH/PWH, pp. 77–78.
+- `THAI-COMMUNITY-2026-OLD-HIGH-LOW` — Lower-Highs/Lower-Lows approach-structure preference before treating an Old High sweep as high-conviction, p.242.
+- `THAI-COMMUNITY-2026-LIQUIDITY-TRADING` — round-number BSL clustering, gold 1900/1925/1950/1975/2000 worked example, p.320.

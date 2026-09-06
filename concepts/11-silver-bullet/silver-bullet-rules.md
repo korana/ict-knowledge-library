@@ -4,8 +4,8 @@
 **Aliases:** SB rules, SB checklist, silver bullet criteria
 **ICT Confidence:** high
 **Year Introduced:** 2022
-**Year Refined:** 2025
-**Source IDs:** ICT-2022-SILVER-BULLET, ICT-2025-MACRO-PRECISION
+**Year Refined:** 2026
+**Source IDs:** ICT-2022-SILVER-BULLET, ICT-2025-MACRO-PRECISION, ICT-2026-LONDON-SB-SHIFT
 **Tags:** silver-bullet, rules, checklist
 
 ## Definition
@@ -16,7 +16,7 @@ The Silver Bullet rules are the operational checklist for taking an SB entry —
 
 A valid Silver Bullet entry requires ALL of:
 
-1. **Inside one of the three SB windows** — 03:00–04:00 / 10:00–11:00 / 14:00–15:00 NY.
+1. **Inside one of the three SB windows** — 02:00–03:00 (London, shifted from 03:00–04:00 in 2026) / 10:00–11:00 / 14:00–15:00 NY.
 2. **HTF bias direction confirmed** — long SBs only on bullish bias; shorts on bearish.
 3. **Liquidity sweep occurred** — a known pool was taken (Asian range, lunch range, prior session high/low, PDH/PDL).
 4. **Displacement after sweep** — strong directional candle in the bias direction.
@@ -54,9 +54,9 @@ sb_entry_valid := in_sb_window
   "timeframes": ["M1","M5","M15"],
   "confidence": "high",
   "year_introduced": "2022",
-  "year_refined": "2025",
+  "year_refined": "2026",
   "related": ["silver-bullet-overview","silver-bullet-london","silver-bullet-ny-am","silver-bullet-ny-pm","silver-bullet-failure-modes","htf-bias-framework","liquidity-sweep","displacement-definition","fair-value-gap","ce-as-primary-entry"],
-  "sources": ["ICT-2022-SILVER-BULLET","ICT-2025-MACRO-PRECISION"]
+  "sources": ["ICT-2022-SILVER-BULLET","ICT-2025-MACRO-PRECISION","ICT-2026-LONDON-SB-SHIFT"]
 }
 ```
 
@@ -65,7 +65,7 @@ sb_entry_valid := in_sb_window
 ```
    SB checklist (bullish example):
 
-   ☐ Time inside 03-04 / 10-11 / 14-15 NY?    [SB window]
+   ☐ Time inside 02-03 (LDN) / 10-11 / 14-15 NY?    [SB window]
    ☐ HTF bias bullish?                         [D / W check]
    ☐ Liquidity sweep occurred (e.g. Asian SSL or lunch low)?
    ☐ Displacement candle after sweep?
@@ -108,4 +108,4 @@ M1 / M5.
 
 ## Citations
 
-- `ICT-2022-SILVER-BULLET`, `ICT-2025-MACRO-PRECISION`.
+- `ICT-2022-SILVER-BULLET`, `ICT-2025-MACRO-PRECISION`, `ICT-2026-LONDON-SB-SHIFT`.

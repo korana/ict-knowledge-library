@@ -4,8 +4,8 @@
 **Aliases:** bullish RB, lower-wick rejection block
 **ICT Confidence:** medium
 **Year Introduced:** 2018
-**Year Refined:** 2022
-**Source IDs:** ICT-2018-BLOCKS, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2018-BLOCKS, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-REJECTION-BLOCK
 **Tags:** rejection-block, bullish
 
 ## Definition
@@ -48,9 +48,9 @@ bullish_rb := lower_wick / range_n >= 0.60
   "timeframes": ["M15","H1","H4","D"],
   "confidence": "medium",
   "year_introduced": "2018",
-  "year_refined": "2022",
+  "year_refined": "2026",
   "related": ["rejection-block","bearish-rejection-block","sell-side-liquidity","liquidity-sweep","bullish-order-block","turtle-soup"],
-  "sources": ["ICT-2018-BLOCKS","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "sources": ["ICT-2018-BLOCKS","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-REJECTION-BLOCK"]
 }
 ```
 
@@ -85,6 +85,7 @@ M15+.
 
 - **Body-vs-wick confusion.** RB references the wick rejection zone; OB references the body. Don't mix them.
 - **No SSL anchor.** A long lower wick without a key-level anchor is just a hammer candle — interesting but not RB-grade.
+- **Multi-candle clusters / D1+ preference.** See [rejection-block](rejection-block.md)'s Common Mistakes for this source's zone-drawing convention (use the longest wick in a cluster) and its D1+/no-H4-or-below preference.
 
 ## Related Concepts
 
@@ -93,3 +94,4 @@ M15+.
 ## Citations
 
 - `ICT-2018-BLOCKS`, `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `THAI-COMMUNITY-2026-REJECTION-BLOCK` — zone-drawing and timeframe-preference notes, see [rejection-block](rejection-block.md).

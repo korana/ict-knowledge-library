@@ -4,8 +4,8 @@
 **Aliases:** bearish breaker block, BeBB, supply breaker
 **ICT Confidence:** high
 **Year Introduced:** 2017
-**Year Refined:** 2023
-**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-BREAKER-BLOCK
 **Tags:** breaker, bearish
 
 ## Definition
@@ -44,9 +44,9 @@ bearish_breaker_active(ob, retest) := high(retest) reaches low(ob_body)
   "timeframes": ["M15","H1","H4","D"],
   "confidence": "high",
   "year_introduced": "2017",
-  "year_refined": "2023",
+  "year_refined": "2026",
   "related": ["breaker-block","bullish-breaker","bullish-order-block","mitigation-block","failed-breaker","choch-bearish","bos-bearish"],
-  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-BREAKER-BLOCK"]
 }
 ```
 
@@ -76,10 +76,13 @@ M15+.
 - Bearish reaction with FVG down → confirmed bearish breaker.
 - Short at MT 1.0825, SL above OB high 1.0833 (3-pip buffer). Risk = 8 pips.
 
+**Example 2 (2026) — worked sequence per `THAI-COMMUNITY-2026-BREAKER-BLOCK` pp. 61–64:** HTF bullish; price fails to print a new Higher High (Failure Swing per Dow Theory), sweeps buy-side liquidity above a recent Equal High/BSL pool, then breaks below the most recent Higher Low — a bearish MSS. The failed bullish OB above that swept high flips to a bearish breaker.
+
 ## Common Mistakes
 
 - **Mistaken polarity flip direction.** Original bullish OB becomes bearish breaker (this file). Original bearish OB becomes bullish breaker.
 - **Insufficient displacement on the break.** Slow drifts through the OB don't qualify.
+- **Trading a bearish breaker sitting below equilibrium (2026 community source, not an ICT-published gate).** `THAI-COMMUNITY-2026-BREAKER-BLOCK` treats a bearish breaker that isn't in the premium zone as a much weaker candidate — see [breaker-block](breaker-block.md)'s Common Mistakes for the full note; this is a conviction modifier, not a formal requirement here.
 
 ## Related Concepts
 
@@ -88,3 +91,4 @@ M15+.
 ## Citations
 
 - `ICT-2017-CHARTER-OVERVIEW`, `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `THAI-COMMUNITY-2026-BREAKER-BLOCK` — worked bearish sequence, pp. 61–64.

@@ -4,8 +4,8 @@
 **Aliases:** OTE, optimal entry, OTE zone
 **ICT Confidence:** high
 **Year Introduced:** 2017
-**Year Refined:** 2022
-**Source IDs:** ICT-2017-OTE, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2017-OTE, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-OTE
 **Tags:** ote, fibonacci, entry, foundational
 
 ## Definition
@@ -52,9 +52,9 @@ OTE_optimal = 1.08295
   "timeframes": ["M5","M15","H1","H4","D"],
   "confidence": "high",
   "year_introduced": "2017",
-  "year_refined": "2022",
-  "related": ["ote-62","ote-705","ote-79","ote-rules","ote-failure","ict-fib-overview","fib-62","fib-705","fib-79","fib-vs-ote","standard-deviation-projections","pd-array-definition"],
-  "sources": ["ICT-2017-OTE","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "year_refined": "2026",
+  "related": ["ote-62","ote-705","ote-79","ote-rules","ote-failure","ict-fib-overview","fib-62","fib-705","fib-79","fib-vs-ote","standard-deviation-projections","pd-array-definition","pd-array-stack"],
+  "sources": ["ICT-2017-OTE","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-OTE"]
 }
 ```
 
@@ -98,13 +98,17 @@ Most actionable on M5–H4 entry TFs. Daily OTE setups exist but the swing leg s
 - **OTE against HTF bias.** Counter-trend OTE setups need explicit HTF reversal context (CHoCH/MSS). Without it, the trade fights the algorithm.
 - **Demanding exact 0.705.** Use a buffer ±0.5–1 pip on FX. Pixel-precision misses fills.
 - **Ignoring leg quality.** A choppy, overlapping "leg" produces unreliable retracement levels. Use clean swing legs only.
+- **Assuming OTE only applies at reversals.** A 2026 community source uses the same OTE zone in two distinct contexts: at a reversal (anchored to a Market Structure Shift) and at trend continuation (anchored to a Break of Structure), pairing either with a Breaker/FVG confluence inside the zone. Don't assume OTE implies MSS specifically.
+- **Missing the connection to [pd-array-stack](../05-pd-arrays/pd-array-stack.md).** A 2026 community source notes that where price rests within the OTE retracement often corresponds to which pd-array-stack layer it's landing on — retracement depth and stack-layer identity describe overlapping territory from different angles.
 
 ## Related Concepts
 
 - [ote-62](ote-62.md), [ote-705](ote-705.md), [ote-79](ote-79.md), [ote-rules](ote-rules.md), [ote-failure](ote-failure.md) — per-level and rules deep-dives.
 - [ict-fib-overview](../28-fibonacci-levels/ict-fib-overview.md), [fib-62](../28-fibonacci-levels/fib-62.md), [fib-705](../28-fibonacci-levels/fib-705.md), [fib-79](../28-fibonacci-levels/fib-79.md), [fib-vs-ote](../28-fibonacci-levels/fib-vs-ote.md), [standard-deviation-projections](../28-fibonacci-levels/standard-deviation-projections.md).
 - [pd-array-definition](../05-pd-arrays/pd-array-definition.md).
+- [pd-array-stack](../05-pd-arrays/pd-array-stack.md) — retracement depth and stack-layer identity as two views of the same territory.
 
 ## Citations
 
 - `ICT-2017-OTE`, `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `THAI-COMMUNITY-2026-OTE` — OTE used at both MSS-anchored reversal and BOS-anchored continuation contexts (p.291); OTE-to-stack-layer cross-reference (p.292).

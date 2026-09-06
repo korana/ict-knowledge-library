@@ -4,8 +4,8 @@
 **Aliases:** none (disambiguation page)
 **ICT Confidence:** high
 **Year Introduced:** 2016
-**Year Refined:** 2022
-**Source IDs:** ICT-2016-FVG-INTRO, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2016-FVG-INTRO, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-FVG
 **Tags:** imbalance, fvg, disambiguation, terminology
 
 ## Definition
@@ -67,9 +67,9 @@ is_FVG(n)            := is_imbalance(n)
   "timeframes": ["M1","M5","M15","H1","H4","D","W"],
   "confidence": "high",
   "year_introduced": "2016",
-  "year_refined": "2022",
+  "year_refined": "2026",
   "related": ["imbalance-definition","inefficiency","fair-value-gap","volume-imbalance-detail","liquidity-void"],
-  "sources": ["ICT-2016-FVG-INTRO","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "sources": ["ICT-2016-FVG-INTRO","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-FVG"]
 }
 ```
 
@@ -107,7 +107,7 @@ All TFs.
 ## Common Mistakes
 
 - **Calling every body gap an FVG.** Body-only gaps without the wick-non-overlap rule are volume imbalances, not FVGs.
-- **Treating the terms as interchangeable.** They overlap but FVG is the stricter case.
+- **Treating the terms as interchangeable.** They overlap but FVG is the stricter case. Note (2026): a Thai community source (`THAI-COMMUNITY-2026-FVG`) uses "FVG" and "Imbalance" interchangeably in casual explanation ("สำหรับผมแล้ว Fair Value Gap กับ Imbalance นั้น เหมือนกันใช้เหมือนกัน") while elsewhere in the same passage describing FVG as ICT's specific term and Imbalance as the explanatory gloss for it — closer to this page's containment relationship than to a rigorous competing claim. Not treated as `disputed`; cited here as an example of the loose usage this page's Common Mistakes section already warns about.
 - **Insisting on FVGs for entries.** Volume imbalances and broader voids also qualify as ICT entry references at lower conviction.
 
 ## Related Concepts
@@ -117,3 +117,4 @@ All TFs.
 ## Citations
 
 - `ICT-2016-FVG-INTRO`, `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `THAI-COMMUNITY-2026-FVG` — p.67, casual FVG/Imbalance interchangeable usage flagged above.

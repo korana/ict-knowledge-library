@@ -4,8 +4,8 @@
 **Aliases:** VI, body imbalance, body-vs-body gap
 **ICT Confidence:** high
 **Year Introduced:** 2018
-**Year Refined:** 2022
-**Source IDs:** ICT-2017-DISPLACEMENT, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2017-DISPLACEMENT, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-FVG-TECHNIQUE
 **Tags:** imbalance, volume, body-gap
 
 ## Definition
@@ -52,9 +52,9 @@ A volume imbalance is meaningful when the body gap is substantial (≥ 30% of av
   "timeframes": ["M5","M15","H1","H4","D"],
   "confidence": "high",
   "year_introduced": "2018",
-  "year_refined": "2022",
+  "year_refined": "2026",
   "related": ["imbalance-definition","imbalance-vs-fvg","fair-value-gap","volume-imbalance","displacement-definition"],
-  "sources": ["ICT-2017-DISPLACEMENT","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "sources": ["ICT-2017-DISPLACEMENT","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-FVG-TECHNIQUE"]
 }
 ```
 
@@ -94,6 +94,7 @@ M5+ generally. Lower TFs have noise-driven body gaps that aren't institutional i
 - **Conflating with FVG.** A volume imbalance has overlapping wicks; an FVG does not. Don't call body gaps "FVGs."
 - **Counting tiny gaps.** 1–2 tick body gaps from broker-side feed jitter aren't real volume imbalances.
 - **Ignoring ATR scale.** A 10-pip body gap on EURUSD is significant; a 10-pip body gap on XAUUSD is noise. Calibrate by instrument.
+- **Treating VI as only meaningful on HTF.** A 2026 community source (`THAI-COMMUNITY-2026-FVG-TECHNIQUE`) recommends confining VI use to Daily/Weekly/Monthly, advising against H4-and-below. That's a practitioner preference for signal cleanliness, not an ICT restriction — this file's M5+ scope stands.
 
 ## Related Concepts
 
@@ -102,3 +103,4 @@ M5+ generally. Lower TFs have noise-driven body gaps that aren't institutional i
 ## Citations
 
 - `ICT-2017-DISPLACEMENT`, `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `THAI-COMMUNITY-2026-FVG-TECHNIQUE` — HTF-preference note, pp. 168–174.

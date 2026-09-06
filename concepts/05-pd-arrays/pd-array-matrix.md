@@ -89,6 +89,7 @@ The matrix is multi-TF by definition. Don't include arrays from below your minim
 
 ## Common Mistakes
 
+- **Not to be confused with [pd-array-stack](pd-array-stack.md).** A 2026 community source uses "PD Array Matrix" as its own name for a fixed 7-layer spatial retest ordering — a static conceptual model, not this file's per-trade tabulation tool. If a source says "PD Array Matrix," check whether it means this working document or that ordering.
 - **Listing everything.** Too many entries make the matrix unusable. Cap by TF (M15+) and by freshness (unmitigated only).
 - **Static matrix.** Refresh as price interacts with arrays — once an array is mitigated or invalidated by a BOS, mark it as such.
 - **Skipping nesting markers.** Nested arrays often produce the strongest setups; explicitly note which arrays overlap.
@@ -97,6 +98,7 @@ The matrix is multi-TF by definition. Don't include arrays from below your minim
 
 - [pd-array-definition](pd-array-definition.md), [pd-array-hierarchy](pd-array-hierarchy.md), [pd-array-nesting](pd-array-nesting.md), [pd-array-confluence](pd-array-confluence.md), [htf-pd-array-hierarchy](htf-pd-array-hierarchy.md).
 - [liquidity-matrix](../02-liquidity/liquidity-matrix.md) — analogous tool for liquidity pools.
+- [pd-array-stack](pd-array-stack.md) — a differently-named, differently-purposed concept sharing a similar name in some community sources.
 
 ## Citations
 

@@ -4,8 +4,8 @@
 **Aliases:** OB criteria, order block rules, OB qualification
 **ICT Confidence:** high
 **Year Introduced:** 2016
-**Year Refined:** 2022
-**Source IDs:** ICT-2016-OB-INTRO, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2016-OB-INTRO, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-ORDER-BLOCK
 **Tags:** order-block, criteria, foundational
 
 ## Definition
@@ -21,6 +21,10 @@ A candle qualifies as an OB if ALL of:
 3. **Breaks structure.** The displacement breaks a recent swing high/low (BOS or CHoCH/MSS).
 4. **Anchored at a swing pivot.** Best-quality OBs sit at swing highs (bearish) or swing lows (bullish) — pivots that already had structural significance.
 5. **Fresh.** Has not yet been mitigated.
+
+**Box-drawing reference hierarchy (community-attributed):** for a wide-range OB candle, `THAI-COMMUNITY-2026-ORDER-BLOCK` (pp.190–191) ranks three internal reference lines by a 3-star importance system: **Open Price ★★★** (the primary, highest-conviction reference — where ICT's own Mentorship 2022 clips are cited as starting the box), **Mean Threshold / 50% ★★** (see [mean-threshold](../27-equilibrium/mean-threshold.md)), and **High/Low of the OB ★** (least conviction, widest reference). This differs from this library's existing default of treating MT as the primary entry — see Common Mistakes.
+
+**Narrow-range candle handling (community-attributed):** when the OB candle's range is small, this source (pp.192–194) gives three sub-cases for where the box's edges sit relative to the candle that follows: (1) the OB's low aligns with the next candle's open price; (2) the OB's high aligns with the next candle's open price; (3) the middle candle in a 3-candle formation can be either bullish or bearish — the box is still drawn from the OB candle's own open/close, but which edge the retest respects depends on which of these three geometries is present. This is a visual-recognition aid, not a change to the open/close boxing rule itself.
 
 ## Formula / Math
 
@@ -60,9 +64,9 @@ bearish_ob_mt   := (close(n) + open(n)) / 2
   "timeframes": ["M5","M15","H1","H4","D"],
   "confidence": "high",
   "year_introduced": "2016",
-  "year_refined": "2022",
-  "related": ["bullish-order-block","bearish-order-block","mitigated-order-block","unmitigated-order-block","mean-threshold","displacement-definition","fair-value-gap","bos-bullish","bos-bearish"],
-  "sources": ["ICT-2016-OB-INTRO","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "year_refined": "2026",
+  "related": ["bullish-order-block","bearish-order-block","mitigated-order-block","unmitigated-order-block","mean-threshold","displacement-definition","fair-value-gap","bos-bullish","bos-bearish","cisd","order-block-trading-framework"],
+  "sources": ["ICT-2016-OB-INTRO","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-ORDER-BLOCK"]
 }
 ```
 
@@ -102,6 +106,7 @@ All TFs M5+. M1 OBs are too noisy.
 - **Skipping the structure-break check.** A "displacement" that doesn't break structure isn't significant enough; many practitioners include the BOS check explicitly.
 - **Treating bodies vs ranges inconsistently.** Use OB body (open/close) by default; range version (high/low) is broader but less precise.
 - **Stale OBs.** Once mitigated (price returned and reacted), the OB stops being a fresh entry zone.
+- **Assuming MT is always the primary reference.** This library's default (see [mean-threshold](../27-equilibrium/mean-threshold.md)) treats MT as the primary entry depth. A 2026 community source ranks the OB candle's **open price** above MT in its own 3-star importance system (Open ★★★ > MT ★★ > High/Low ★) — a different emphasis, not a correction; both are valid entry references and should be treated as alternatives, not one replacing the other.
 
 ## Related Concepts
 
@@ -109,7 +114,10 @@ All TFs M5+. M1 OBs are too noisy.
 - [mitigated-order-block](mitigated-order-block.md), [unmitigated-order-block](unmitigated-order-block.md) — state.
 - [mean-threshold](../27-equilibrium/mean-threshold.md) — MT entry depth.
 - [displacement-definition](../09-displacement/displacement-definition.md), [fair-value-gap](../06-fair-value-gaps/fair-value-gap.md), [bos-bullish](../01-market-structure/bos-bullish.md), [bos-bearish](../01-market-structure/bos-bearish.md).
+- [cisd](cisd.md) — a positionally-qualified OB subtype from the same community source.
+- [order-block-trading-framework](order-block-trading-framework.md) — the 5-step entry pipeline this OB feeds into.
 
 ## Citations
 
 - `ICT-2016-OB-INTRO`, `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `THAI-COMMUNITY-2026-ORDER-BLOCK` — box-drawing reference hierarchy and narrow-range candle handling, pp. 190–194.

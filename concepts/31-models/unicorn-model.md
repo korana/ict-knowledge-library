@@ -4,8 +4,8 @@
 **Aliases:** ICT Unicorn, the Unicorn, unicorn setup
 **ICT Confidence:** high
 **Year Introduced:** 2023
-**Year Refined:** 2023
-**Source IDs:** ICT-2023-UNICORN
+**Year Refined:** 2026
+**Source IDs:** ICT-2023-UNICORN, THAI-COMMUNITY-2026-TRADE-SETUP
 **Tags:** model, unicorn, 2023
 
 ## Definition
@@ -22,6 +22,8 @@ A Unicorn requires ALL of:
 4. **Liquidity sweep** preceded the breaker formation (typically the sweep that triggered the original CHoCH/MSS).
 
 When all four align at the same price zone, the setup is "Unicorn-grade."
+
+**Killzone-only, stated explicitly (community-attributed).** A 2026 community source adds a fifth constraint this file previously carried no time criterion for: the Unicorn only occurs during the **London or NY killzone** — *"Setup Unicorn นี้จะไม่เกิดพร่ำเพื่อ จะเกิดจะเฉพาะช่วงเวลาเท่านั้น"* ("this Unicorn Setup won't occur carelessly — it occurs only during that specific time window"), consistent with the setup's deliberate rarity. The same source also independently corroborates this file's criterion 2 (breaker∩FVG overlap) as the feature that most distinguishes Unicorn from its own plainer [ict-2022-model](ict-2022-model.md) variants — its own words: *"จุดเข้าออเดอร์จะต้องมีการทับซ้อนกันระหว่าง Breaker Block กับ Fair Value Gap"* ("the entry point must have overlap between the Breaker Block and the Fair Value Gap").
 
 ## Formula / Math
 
@@ -48,8 +50,8 @@ unicorn(zone):
   "confidence": "high",
   "year_introduced": "2023",
   "year_refined": "2023",
-  "related": ["ict-2022-model","ict-2023-model","breaker-block","fair-value-gap","nested-fvg","htf-bias-framework","liquidity-sweep","pd-array-confluence"],
-  "sources": ["ICT-2023-UNICORN"]
+  "related": ["ict-2022-model","ict-2023-model","breaker-block","fair-value-gap","nested-fvg","htf-bias-framework","liquidity-sweep","pd-array-confluence","inducement"],
+  "sources": ["ICT-2023-UNICORN","THAI-COMMUNITY-2026-TRADE-SETUP"]
 }
 ```
 
@@ -96,3 +98,4 @@ M15+. HTF Unicorns (H4, D) are the most-cited variant.
 ## Citations
 
 - `ICT-2023-UNICORN`.
+- `THAI-COMMUNITY-2026-TRADE-SETUP` — killzone-only timing and breaker∩FVG overlap corroboration, pp.587–591.

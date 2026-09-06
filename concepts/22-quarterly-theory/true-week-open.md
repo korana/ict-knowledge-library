@@ -4,8 +4,8 @@
 **Aliases:** TWO, weekly true open, Sunday/Monday open
 **ICT Confidence:** high
 **Year Introduced:** 2017
-**Year Refined:** 2023
-**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2023-QUARTERLY-THEORY
+**Year Refined:** 2026
+**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2023-QUARTERLY-THEORY, THAI-COMMUNITY-2026-DAILY-WEEKLY-PROFILE
 **Tags:** quarterly-theory, true-week-open
 
 ## Definition
@@ -20,6 +20,8 @@ The **True Week Open (TWO)** is the **first traded price of the new trading week
   - Verify which the broker uses.
 - Acts as horizontal weekly reference.
 - Combines with TDO for layered intraday/weekly bias context.
+
+**TWO/TDO interaction (community-attributed):** a 2026 community source gives a specific bullish-bias checkpoint — Wednesday's [true-day-open](true-day-open.md) (00:00 NY) should sit **above** the TWO for a buy bias to hold; TDO below TWO on Wednesday is a warning the bullish read is weakening. The same source gives an earlier, coarser version of the same check on Wednesday's session open itself (not the 00:00 NY TDO specifically): if Wednesday's session opens above the week's Monday open, bias the week to continue up; if below, bias it to continue down.
 
 ## Formula / Math
 
@@ -50,7 +52,7 @@ weekly_discount_vs_TWO := price < two
   "year_introduced": "2017",
   "year_refined": "2023",
   "related": ["quarterly-theory-overview","weekly-quarters","true-day-open","time-of-day-pivots","sunday-open-gap","nwog","htf-bias-framework"],
-  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2023-QUARTERLY-THEORY"]
+  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2023-QUARTERLY-THEORY","THAI-COMMUNITY-2026-DAILY-WEEKLY-PROFILE"]
 }
 ```
 
@@ -87,7 +89,9 @@ H1 / H4 / D.
 ## Related Concepts
 
 - [quarterly-theory-overview](quarterly-theory-overview.md), [weekly-quarters](weekly-quarters.md), [true-day-open](true-day-open.md), [time-of-day-pivots](../04-time-cycles/time-of-day-pivots.md), [sunday-open-gap](../31-models/sunday-open-gap.md), [nwog](../31-models/nwog.md), [htf-bias-framework](../25-htf-bias/htf-bias-framework.md).
+- [weekly-profile-patterns](weekly-profile-patterns.md) — named weekly shapes several of which measure sweeps and reversals against TWO.
 
 ## Citations
 
 - `ICT-2017-CHARTER-OVERVIEW`, `ICT-2023-QUARTERLY-THEORY`.
+- `THAI-COMMUNITY-2026-DAILY-WEEKLY-PROFILE` — Wednesday TDO-vs-TWO bullish checkpoint and the coarser Wednesday-open-vs-Monday-open continuation rule, pp.562, 565.

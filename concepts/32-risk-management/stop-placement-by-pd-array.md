@@ -4,8 +4,8 @@
 **Aliases:** structural SL, PD-array SL, invalidation-based SL
 **ICT Confidence:** high
 **Year Introduced:** 2017
-**Year Refined:** 2022
-**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-ORDER-BLOCK
 **Tags:** risk, sl, pd-array, foundational
 
 ## Definition
@@ -53,9 +53,9 @@ sl_for_short = pd_array_invalidation_high + buffer
   "timeframes": ["all"],
   "confidence": "high",
   "year_introduced": "2017",
-  "year_refined": "2022",
+  "year_refined": "2026",
   "related": ["risk-per-trade","r-multiple","position-sizing","fair-value-gap","bullish-order-block","breaker-block","mean-threshold","ce-as-primary-entry"],
-  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-ORDER-BLOCK"]
 }
 ```
 
@@ -95,6 +95,7 @@ All TFs.
 - **No buffer.** Pixel-precise SLs at exact PD-array invalidation get wicked out on routine noise.
 - **Buffer too wide.** 10-pip buffer on a 15-pip setup destroys R:R. Use 2–5 pips.
 - **Wrong invalidation reference.** Bullish FVG SL goes BELOW the FVG (FVG low), not below CE — CE is the entry, the LOW is the invalidation.
+- **Assuming a fixed pip buffer is the only OB convention.** ICT's own Mentorship 2022 guidance (clips 1–2, per a 2026 community source's citation) sizes the OB buffer in **candles** — roughly 2 candles beyond the OB — rather than a fixed pip distance. The same source states its own preference for a 10–20 pip buffer instead, explicitly reasoning that ICT trades futures while the author trades retail forex, where a candle-count buffer translates to inconsistent pip distances across instruments. Treat both as valid conventions for the same underlying "buffer beyond invalidation" principle — this file's 2–5 pip default is a third, tighter convention; none of the three overrides the others.
 
 ## Related Concepts
 
@@ -104,3 +105,4 @@ All TFs.
 ## Citations
 
 - `ICT-2017-CHARTER-OVERVIEW`, `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `THAI-COMMUNITY-2026-ORDER-BLOCK` — candle-count buffer citation and the author's own 10–20 pip preference, p.209.

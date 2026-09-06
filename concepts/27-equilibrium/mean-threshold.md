@@ -4,8 +4,8 @@
 **Aliases:** MT, mean-threshold-of-OB, OB midpoint
 **ICT Confidence:** high
 **Year Introduced:** 2017
-**Year Refined:** 2022
-**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-ORDER-BLOCK
 **Tags:** equilibrium, mean-threshold, ob, operational
 
 ## Definition
@@ -49,9 +49,9 @@ MT_range = (high(OB_candle) + low(OB_candle)) / 2
   "timeframes": ["M5","M15","H1","H4","D"],
   "confidence": "high",
   "year_introduced": "2017",
-  "year_refined": "2022",
+  "year_refined": "2026",
   "related": ["equilibrium-definition","equilibrium-as-decision-point","bullish-order-block","bearish-order-block","order-block-criteria","consequent-encroachment"],
-  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-ORDER-BLOCK"]
 }
 ```
 
@@ -92,6 +92,7 @@ All TFs that support OBs (M5+ generally; M1 OBs are noisy).
 - **Confusing body MT and range MT.** Pick one and use consistently. Body MT is the more common ICT convention.
 - **Entering at OB far edge instead of MT.** Far-edge entries get worse R:R and are more often skipped before MT is reached.
 - **MT without confirmation.** Even at a clean MT, require post-touch confirmation (lower-TF FVG, structure shift, etc.) before commitment.
+- **Treating MT as strictly higher-conviction than the OB's open price.** A 2026 community source ranks the OB candle's open price above MT in its own 3-star reference hierarchy (see [order-block-criteria](../07-order-blocks/order-block-criteria.md)) — this file's MT-as-default framing stands, but treat the two as alternative entry references rather than assuming MT always wins.
 
 ## Related Concepts
 
@@ -102,3 +103,4 @@ All TFs that support OBs (M5+ generally; M1 OBs are noisy).
 ## Citations
 
 - `ICT-2017-CHARTER-OVERVIEW`, `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `THAI-COMMUNITY-2026-ORDER-BLOCK` — 3-star reference hierarchy placing MT below open price, pp. 190–191.

@@ -4,8 +4,8 @@
 **Aliases:** pivot high, fractal high, short-term high (STH), intermediate-term high (ITH), long-term high (LTH)
 **ICT Confidence:** high
 **Year Introduced:** 2016
-**Year Refined:** 2017
-**Source IDs:** ICT-2016-MENTORSHIP-OVERVIEW, ICT-2017-CHARTER-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2016-MENTORSHIP-OVERVIEW, ICT-2017-CHARTER-OVERVIEW, THAI-COMMUNITY-2026-DAILY-BIAS-SWING-POINT
 **Tags:** structure, pivot, fractal, swing, foundational
 
 ## Definition
@@ -27,6 +27,8 @@ ICT also teaches a fractal hierarchy by aggregating swing points:
 - **Long-Term High (LTH):** an ITH whose adjacent ITHs are both lower than it.
 
 This produces a recursive structure: LTH ⊃ ITH ⊃ STH.
+
+**Candle-cluster confirmation (community-attributed alternative).** A 2026 community source, for the specific purpose of validating a swing high as a genuine Daily Bias anchor (not for structure/BOS purposes generally), requires the swing to be marked by a **3-candle reversal cluster** — an Evening Star, or a Three Inside Down — rather than accepting any bare 3-bar `H_n > H_{n-1} AND H_n > H_{n+1}` peak. This is the identical cluster list a different chapter by the same author already uses to locate a CISD candle (see [cisd](../07-order-blocks/cisd.md) Common Mistakes) — same author's own technique reused for a second purpose, not independent corroboration. Treat as an added confidence filter for high-stakes anchors (e.g. [daily-bias](../25-htf-bias/daily-bias.md)'s Method 3), not a replacement for the ICT 3-bar definition above.
 
 ## Formula / Math
 
@@ -59,8 +61,8 @@ Where `H_n` is the high (including upper wick) of candle at index `n`.
   "confidence": "high",
   "year_introduced": "2016",
   "year_refined": "2017",
-  "related": ["swing-low","bos-bullish","choch-bullish","internal-structure","external-structure"],
-  "sources": ["ICT-2016-MENTORSHIP-OVERVIEW","ICT-2017-CHARTER-OVERVIEW"]
+  "related": ["swing-low","bos-bullish","choch-bullish","internal-structure","external-structure","cisd","daily-bias"],
+  "sources": ["ICT-2016-MENTORSHIP-OVERVIEW","ICT-2017-CHARTER-OVERVIEW","THAI-COMMUNITY-2026-DAILY-BIAS-SWING-POINT"]
 }
 ```
 
@@ -109,8 +111,11 @@ Applies to every timeframe ICT teaches: M1 through MN1. Higher-timeframe swing h
 - [internal-structure](internal-structure.md) — swing highs inside a larger range.
 - [external-structure](external-structure.md) — the LTH/LTL swings that define the larger range itself.
 - [equal-highs](../02-liquidity/equal-highs.md) — what two equal-priced highs form instead of a single swing.
+- [cisd](../07-order-blocks/cisd.md) — same author's identical 3-candle-cluster list, used there to locate a CISD candle instead of a Daily Bias anchor.
+- [daily-bias](../25-htf-bias/daily-bias.md) — Method 3, the setup this candle-cluster filter serves.
 
 ## Citations
 
 - `ICT-2016-MENTORSHIP-OVERVIEW` — original 3-bar swing definition.
 - `ICT-2017-CHARTER-OVERVIEW` — STH / ITH / LTH fractal hierarchy formalized.
+- `THAI-COMMUNITY-2026-DAILY-BIAS-SWING-POINT` — 3-candle cluster (Evening Star / Three Inside Down) as a Daily Bias validity filter, p.429.

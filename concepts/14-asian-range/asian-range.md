@@ -4,8 +4,8 @@
 **Aliases:** Asia range, AR, Asian session range
 **ICT Confidence:** high
 **Year Introduced:** 2016
-**Year Refined:** 2022
-**Source IDs:** ICT-2016-LIQUIDITY, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2016-LIQUIDITY, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-ASIAN-RANGE
 **Tags:** asian-range, liquidity, foundational
 
 ## Definition
@@ -19,7 +19,8 @@ The Asian range is the price range formed during the Asia session (typically 18:
   - Asian range high = max(high) over the window.
   - Asian range low = min(low) over the window.
 - Equal highs / equal lows along the bounds are common — they make the bounds explicit liquidity pools.
-- Range size: typically 25–60 pips on EURUSD; varies by instrument and volatility regime.
+- Range size: typically 25–60 pips on EURUSD; varies by instrument and volatility regime. A 2026 community source independently states the same order of magnitude — "200–400 จุด" (points, its own CBDR-chapter unit, not pips; see [central-bank-dealing-range](../04-time-cycles/central-bank-dealing-range.md)'s unit-correction note) — which on a standard 5-digit FX feed (10 points = 1 pip) converts to ~20–40 pips, checked and left as a confirming citation rather than a change to this figure.
+- **Breakout-and-retest continuation (community-attributed):** distinct from the wick-based Judas sweep in [asian-range-sweep](asian-range-sweep.md), a 2026 community source frames the Asian range as a "base" that price sometimes *closes through* with real displacement rather than merely wicking — when that happens, the broken bound often gets retested from the far side before price continues in the breakout direction. This is the flip-zone/breaker mechanic (a broken level trading the opposite role on return) applied to the Asian range's own bound, not a new mechanism — see [inversion-fvg](../06-fair-value-gaps/inversion-fvg.md)'s "Flip Zone" alias and [bullish-breaker](../08-breaker-blocks/bullish-breaker.md)/[bearish-breaker](../08-breaker-blocks/bearish-breaker.md) for the underlying mechanic. The source's own cover subtitle names this the chapter's central use of the range ("building a foundation for Breakout").
 
 ## Formula / Math
 
@@ -42,14 +43,15 @@ asian_eq         = (asian_high + asian_low) / 2
   "aliases": ["asia-range", "AR", "asian-session-range"],
   "criteria": [
     {"id": "c1", "expr": "bounds_formed_during_asian_window == true"},
-    {"id": "c2", "expr": "high == max_high AND low == min_low"}
+    {"id": "c2", "expr": "high == max_high AND low == min_low"},
+    {"id": "c3", "expr": "closed_through_bound_with_displacement -> broken_bound acts as breaker/flip_zone on retest"}
   ],
   "timeframes": ["M5","M15","H1"],
   "confidence": "high",
   "year_introduced": "2016",
-  "year_refined": "2022",
-  "related": ["asian-range-high","asian-range-low","asian-range-sweep","asian-session-bias","asian-range-projections","asia-session","asia-killzone","judas-swing","liquidity-pool","range-contraction"],
-  "sources": ["ICT-2016-LIQUIDITY","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "year_refined": "2026",
+  "related": ["asian-range-high","asian-range-low","asian-range-sweep","asian-session-bias","asian-range-projections","asia-session","asia-killzone","judas-swing","liquidity-pool","range-contraction","inversion-fvg","bullish-breaker","bearish-breaker","central-bank-dealing-range"],
+  "sources": ["ICT-2016-LIQUIDITY","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-ASIAN-RANGE"]
 }
 ```
 
@@ -84,7 +86,7 @@ M5 / M15 are the practical TFs for marking bounds. H1 captures the entire range 
 
 - **Using broker time.** All ICT Asian range references are NY-anchored.
 - **Ignoring the killzone-vs-session distinction.** The full Asia session (18:00–03:00) range and the Asian KZ range (20:00–00:00) often differ; specify which you're using. Most ICT references use the KZ window.
-- **Treating the range as a pivot, not as liquidity.** The Asian range is not a "support/resistance" zone — it is **engineered liquidity** that London is going to take. Bias should be set by HTF, not by the range alone.
+- **Treating the range as a pivot, not as liquidity.** While the range is still intact (unbroken), it is not a "support/resistance" zone — it is **engineered liquidity** that London is going to take. Bias should be set by HTF, not by the range alone. This is scoped to the *unbroken* range: once a bound has actually been closed through with displacement (see the breakout-and-retest note above), the broken level can legitimately act as a breaker/flip zone on retest — a later-stage mechanic, not a contradiction of this rule.
 
 ## Related Concepts
 
@@ -95,7 +97,10 @@ M5 / M15 are the practical TFs for marking bounds. H1 captures the entire range 
 - [asia-session](../15-sessions/asia-session.md), [asia-killzone](../10-killzones/asia-killzone.md) — parent session/KZ.
 - [judas-swing](../13-judas-swing/judas-swing.md) — what London does to the range.
 - [liquidity-pool](../02-liquidity/liquidity-pool.md), [range-contraction](../01-market-structure/range-contraction.md).
+- [inversion-fvg](../06-fair-value-gaps/inversion-fvg.md), [bullish-breaker](../08-breaker-blocks/bullish-breaker.md), [bearish-breaker](../08-breaker-blocks/bearish-breaker.md) — the flip-zone/breaker mechanic behind the breakout-and-retest note above.
+- [central-bank-dealing-range](../04-time-cycles/central-bank-dealing-range.md) — the sibling time-bounded range this file's size figure was cross-checked against.
 
 ## Citations
 
 - `ICT-2016-LIQUIDITY`, `ICT-2022-MENTORSHIP-OVERVIEW`.
+- `THAI-COMMUNITY-2026-ASIAN-RANGE` — breakout-and-retest framing (the chapter's own stated thesis), p.470; "200–400 จุด" range-size figure cross-checked against the existing 25–60 pip figure, p.469.

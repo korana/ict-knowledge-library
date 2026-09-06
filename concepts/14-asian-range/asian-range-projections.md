@@ -4,8 +4,8 @@
 **Aliases:** Asia projections, AR projections, AR extension targets
 **ICT Confidence:** medium
 **Year Introduced:** 2018
-**Year Refined:** 2022
-**Source IDs:** ICT-2017-OTE, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2017-OTE, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-ASIAN-RANGE, THAI-COMMUNITY-2026-STD-PROJECTION
 **Tags:** asian-range, projections, targets
 
 ## Definition
@@ -55,9 +55,9 @@ proj_2x_down   = asian_low - 2.0 * range_size
   "timeframes": ["M15","H1","H4"],
   "confidence": "medium",
   "year_introduced": "2018",
-  "year_refined": "2022",
-  "related": ["asian-range","asian-range-sweep","standard-deviation-projections","draw-on-liquidity","ote-overview"],
-  "sources": ["ICT-2017-OTE","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "year_refined": "2026",
+  "related": ["asian-range","asian-range-sweep","standard-deviation-projections","draw-on-liquidity","ote-overview","central-bank-dealing-range","flout-range"],
+  "sources": ["ICT-2017-OTE","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-ASIAN-RANGE","THAI-COMMUNITY-2026-STD-PROJECTION"]
 }
 ```
 
@@ -102,10 +102,17 @@ M15 / H1 / H4 (project on whichever TF you're trading; Asian range size is small
 
 - [asian-range](asian-range.md), [asian-range-sweep](asian-range-sweep.md), [standard-deviation-projections](../28-fibonacci-levels/standard-deviation-projections.md) — analogous extension framework.
 - [draw-on-liquidity](../02-liquidity/draw-on-liquidity.md), [ote-overview](../17-optimal-trade-entry/ote-overview.md).
+- [central-bank-dealing-range](../04-time-cycles/central-bank-dealing-range.md) — the sibling range this file's system is the named fallback for when CBDR's own range is unusable.
 
 ## Citations
 
 - `ICT-2017-OTE` — fib-style projection logic that AR projections borrow.
 - `ICT-2022-MENTORSHIP-OVERVIEW` — AR projections taught as target tool.
+- `THAI-COMMUNITY-2026-ASIAN-RANGE` — a third documented multiple-notation variant (negative-fib-style −1/−2/−2.5 "Standard Deviation" labeling, anchor bound not stated), p.471.
+- `THAI-COMMUNITY-2026-STD-PROJECTION` — a fourth variant, "Asia STD": symmetric 1–4× integer-multiple projection of the full Asian range, matching CBDR's own STD mechanic, pp.522–525.
 
 > Confidence is `medium` because the specific multiples (0.5/1/1.5/2) vary across ICT teachings; some references use 1/2/3 or fib ratios. Use as a heuristic, not a fixed rule.
+
+A 2026 community source is a third documented variant: a diagram labels Asian-range-anchored levels using the same negative-fib-style "Standard Deviation" notation as [standard-deviation-projections](../28-fibonacci-levels/standard-deviation-projections.md) (levels drawn around −1/−2/−2.5), rather than this file's positive-multiple 0.5×/1×/1.5×/2× convention. The diagram doesn't make clear which bound (swept vs. non-swept) the levels are measured from, so **the anchor bound is not asserted here** — only that the notation-convention variance this file's own confidence hedge already anticipates has a third citable instance. Treat as a naming variant, not a fourth projection system.
+
+**A fourth variant, from the same author's later chapter on Standard Deviation:** "Asia STD" projects the Asian range **symmetrically both above and below**, in **1–4× integer multiples of the full range** — the same mechanic as [central-bank-dealing-range](../04-time-cycles/central-bank-dealing-range.md)'s own CBDR-anchored STD system, applied to the Asian Range as anchor instead. This is neither this file's swept-side-only 0.5×/1×/1.5×/2× convention nor the −1/−2/−2.5 sign-notation variant above — a third distinct convention, not a resolution of either. Confidence stays `medium`; if anything, a fourth documented variant strengthens this file's own "multiples vary across teachings" hedge rather than retiring it.

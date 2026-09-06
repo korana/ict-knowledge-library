@@ -4,8 +4,8 @@
 **Aliases:** PD array tier ranking, array conviction order, PDA stack
 **ICT Confidence:** high
 **Year Introduced:** 2017
-**Year Refined:** 2022
-**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-LIQUIDITY-VOID
 **Tags:** pd-array, hierarchy, ranking
 
 ## Definition
@@ -61,9 +61,9 @@ score(PDA) =
   "timeframes": ["M5","M15","H1","H4","D","W"],
   "confidence": "high",
   "year_introduced": "2017",
-  "year_refined": "2022",
+  "year_refined": "2026",
   "related": ["pd-array-definition","premium-array","discount-array","pd-array-nesting","htf-pd-array-hierarchy","pd-array-confluence","bullish-order-block","breaker-block","fair-value-gap"],
-  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-LIQUIDITY-VOID"]
 }
 ```
 
@@ -99,17 +99,21 @@ The hierarchy applies at any TF; what shifts is the **HTF confluence bonus** —
 
 ## Common Mistakes
 
+- **Not to be confused with [pd-array-stack](pd-array-stack.md).** That file describes the *spatial order* price tests arrays in as it retraces from an MSS toward equilibrium — a different axis from this file's *entry-conviction ranking*. The two orderings needn't agree, and a community source's "PD Array Matrix" naming for its stack model can be mistaken for this hierarchy or for [pd-array-matrix](pd-array-matrix.md) if not read carefully.
 - **Treating ranks as fixed.** A poorly-formed OB (no displacement, no swing-pivot anchor) can be worse than a clean FVG. Rank type, then sanity-check formation quality.
 - **Ignoring depth.** A premium OB at depth 0.3 is much weaker than a premium FVG at depth 0.79.
 - **Skipping HTF confluence.** An LTF-only array without HTF support is a low-conviction entry regardless of its single-TF rank.
+- **Picking the shallowest of several stacked FVGs.** When multiple FVGs stack inside the same premium/discount zone, the depth bonus above still applies between them — a community source (`THAI-COMMUNITY-2026-LIQUIDITY-VOID`, pp.128–129) calls the deepest OB reference in such a stack the "Extreme Order Block" and recommends it over the shallowest FVG. That's this file's existing `depth_bonus` modifier under a different name, not a new array type.
 
 ## Related Concepts
 
 - [pd-array-definition](pd-array-definition.md), [premium-array](premium-array.md), [discount-array](discount-array.md).
 - [pd-array-nesting](pd-array-nesting.md), [pd-array-confluence](pd-array-confluence.md), [htf-pd-array-hierarchy](htf-pd-array-hierarchy.md) — multi-array structures.
+- [pd-array-stack](pd-array-stack.md) — spatial retest ordering, not to be confused with this conviction ranking.
 - [bullish-order-block](../07-order-blocks/bullish-order-block.md), [breaker-block](../08-breaker-blocks/breaker-block.md), [fair-value-gap](../06-fair-value-gaps/fair-value-gap.md) — array types in the hierarchy.
 
 ## Citations
 
 - `ICT-2017-CHARTER-OVERVIEW` — array-type ranking refined.
 - `ICT-2022-MENTORSHIP-OVERVIEW` — operational hierarchy taught for entry selection.
+- `THAI-COMMUNITY-2026-LIQUIDITY-VOID` — "Extreme Order Block" naming for the deepest reference in a stacked-FVG scenario, pp.128–129.

@@ -4,8 +4,8 @@
 **Aliases:** weekly days, days-of-week QT
 **ICT Confidence:** high
 **Year Introduced:** 2023
-**Year Refined:** 2023
-**Source IDs:** ICT-2023-QUARTERLY-THEORY
+**Year Refined:** 2026
+**Source IDs:** ICT-2023-QUARTERLY-THEORY, THAI-COMMUNITY-2026-STD-PROJECTION, THAI-COMMUNITY-2026-DAILY-WEEKLY-PROFILE
 **Tags:** quarterly-theory, weekly
 
 ## Definition
@@ -24,7 +24,13 @@ The weekly map:
 | Thursday | Q4 | X | continuation or reversal |
 | Friday | (closing) | profit-taking | week's structure often resolves |
 
-Common adage: "Tuesday lows on bullish weeks, Tuesday highs on bearish weeks" — referring to the manipulation-direction sweep.
+**Thursday closing-time caution (community-attributed):** a 2026 community source instructs closing any profitable position **before ~23:00 Thai time (GMT+7)** on Thursday — roughly **11:00–12:00 NY**, depending on DST (see [dst-handling](../04-time-cycles/dst-handling.md)) — because past that point price is often already at (or near) the week's low or high. This is a specific operational instant inside the Q4/X window above, not a new phase.
+
+**Friday mechanic (community-attributed):** see [tgif-weekly-po3](../31-models/tgif-weekly-po3.md) for a specific, named Friday setup — a Thursday-liquidity sweep lining up with a weekly/daily HTF FVG, retraced into during the London Killzone — that this table's Friday row previously left unelaborated. Backtested by its source but explicitly not yet used live; confidence set accordingly on that file. A later chapter by the same author states more generally that **Monday and Friday should not be traded** (Friday range is typically a tight 400–500 point band, and the week's overall move tends to retrace 20–30% of its full travel on Friday) — this is a broader "don't trend-trade Friday" caution, not in conflict with TGIF's narrower claim of one specific retracement setup existing inside that same quiet day; see the reconciliation note on [tgif-weekly-po3](../31-models/tgif-weekly-po3.md).
+
+**Weekly shape taxonomy (community-attributed):** the Mon-Tue-Wed-Thu default this table describes fits roughly half of all weeks (see Common Mistakes below); see [weekly-profile-patterns](weekly-profile-patterns.md) for six named alternate shapes covering the rest.
+
+Common adage: "Tuesday lows on bullish weeks, Tuesday highs on bearish weeks" — referring to the manipulation-direction sweep; this is [weekly-profile-patterns](weekly-profile-patterns.md)'s Pattern #1 (Classic Tuesday Low/High of Week).
 
 ## Formula / Math
 
@@ -52,8 +58,8 @@ weekly_quarters:
   "confidence": "high",
   "year_introduced": "2023",
   "year_refined": "2023",
-  "related": ["quarterly-theory-overview","monthly-quarters","daily-quarters","htf-amd"],
-  "sources": ["ICT-2023-QUARTERLY-THEORY"]
+  "related": ["quarterly-theory-overview","monthly-quarters","daily-quarters","htf-amd","tgif-weekly-po3","weekly-profile-patterns"],
+  "sources": ["ICT-2023-QUARTERLY-THEORY","THAI-COMMUNITY-2026-STD-PROJECTION","THAI-COMMUNITY-2026-DAILY-WEEKLY-PROFILE"]
 }
 ```
 
@@ -89,7 +95,11 @@ H1 / H4 / D.
 ## Related Concepts
 
 - [quarterly-theory-overview](quarterly-theory-overview.md), [monthly-quarters](monthly-quarters.md), [daily-quarters](daily-quarters.md), [htf-amd](../12-power-of-three/htf-amd.md).
+- [tgif-weekly-po3](../31-models/tgif-weekly-po3.md) — the Friday-specific mechanic this table's Friday row was missing.
+- [weekly-profile-patterns](weekly-profile-patterns.md) — six named alternate weekly shapes for the ~50% of weeks that don't fit this table's default.
 
 ## Citations
 
 - `ICT-2023-QUARTERLY-THEORY`.
+- `THAI-COMMUNITY-2026-STD-PROJECTION` — TGIF, the Friday mechanic cross-linked above, pp.534–543.
+- `THAI-COMMUNITY-2026-DAILY-WEEKLY-PROFILE` — Thursday closing-time caution and Monday/Friday "don't trade" guidance, pp.563–565.

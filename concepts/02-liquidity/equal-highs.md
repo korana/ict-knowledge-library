@@ -4,8 +4,8 @@
 **Aliases:** EQH, double top liquidity, twin highs, relative equal highs (REH)
 **ICT Confidence:** high
 **Year Introduced:** 2017
-**Year Refined:** 2022
-**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2022-MENTORSHIP-OVERVIEW
+**Year Refined:** 2026
+**Source IDs:** ICT-2017-CHARTER-OVERVIEW, ICT-2022-MENTORSHIP-OVERVIEW, THAI-COMMUNITY-2026-TURTLE-SOUP
 **Tags:** liquidity, eqh, buyside, foundational
 
 ## Definition
@@ -44,9 +44,9 @@ When `ε == 0`, ICT calls them strict EQH; with small `ε > 0` they are REH.
   "timeframes": ["M1","M5","M15","H1","H4","D","W"],
   "confidence": "high",
   "year_introduced": "2017",
-  "year_refined": "2022",
-  "related": ["equal-lows","buy-side-liquidity","relative-equal-highs-lows","liquidity-sweep","liquidity-pool","swing-high"],
-  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2022-MENTORSHIP-OVERVIEW"]
+  "year_refined": "2026",
+  "related": ["equal-lows","buy-side-liquidity","relative-equal-highs-lows","liquidity-sweep","liquidity-pool","swing-high","turtle-soup"],
+  "sources": ["ICT-2017-CHARTER-OVERVIEW","ICT-2022-MENTORSHIP-OVERVIEW","THAI-COMMUNITY-2026-TURTLE-SOUP"]
 }
 ```
 
@@ -81,6 +81,7 @@ Every TF. EQH on D / H4 are major liquidity targets; EQH on M5 are common intra-
 - **Over-strict tolerance.** Insisting on exact-tick equality misses obvious EQH. Use a sensible ε for the instrument.
 - **No intervening pivot.** Two consecutive bars at the same high in a single uptrend are not EQH — they're a small consolidation. EQH require a pullback between them.
 - **Treating sweep as guaranteed reversal.** EQH being swept is high-probability for *some* reaction; whether that reaction is a full reversal depends on PD-array confluence, session, and HTF bias.
+- **Looking here for the sweep+FVG+MSS entry technique.** This file covers what EQH *is*, not how to trade a sweep of it. For a worked EQH sweep + FVG + Market Structure Shift entry example, see [turtle-soup](../20-turtle-soup/turtle-soup.md)'s Examples.
 
 ## Related Concepts
 
@@ -90,8 +91,10 @@ Every TF. EQH on D / H4 are major liquidity targets; EQH on M5 are common intra-
 - [liquidity-sweep](liquidity-sweep.md) — sweep behavior at EQH.
 - [liquidity-pool](liquidity-pool.md) — EQH is the densest pool form.
 - [swing-high](../01-market-structure/swing-high.md) — building block.
+- [turtle-soup](../20-turtle-soup/turtle-soup.md) — worked EQH sweep + FVG + MSS entry technique.
 
 ## Citations
 
 - `ICT-2017-CHARTER-OVERVIEW` — EQH terminology refined.
 - `ICT-2022-MENTORSHIP-OVERVIEW` — EQH as primary sweep targets.
+- `THAI-COMMUNITY-2026-TURTLE-SOUP` — worked EQH sweep + FVG entry example, p.273 (see [turtle-soup](../20-turtle-soup/turtle-soup.md)).
