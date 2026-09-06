@@ -96,6 +96,7 @@ All TFs.
 - **Buffer too wide.** 10-pip buffer on a 15-pip setup destroys R:R. Use 2–5 pips.
 - **Wrong invalidation reference.** Bullish FVG SL goes BELOW the FVG (FVG low), not below CE — CE is the entry, the LOW is the invalidation.
 - **Assuming a fixed pip buffer is the only OB convention.** ICT's own Mentorship 2022 guidance (clips 1–2, per a 2026 community source's citation) sizes the OB buffer in **candles** — roughly 2 candles beyond the OB — rather than a fixed pip distance. The same source states its own preference for a 10–20 pip buffer instead, explicitly reasoning that ICT trades futures while the author trades retail forex, where a candle-count buffer translates to inconsistent pip distances across instruments. Treat both as valid conventions for the same underlying "buffer beyond invalidation" principle — this file's 2–5 pip default is a third, tighter convention; none of the three overrides the others.
+- **Using only the single nearest opposing wick as a breaker's SL reference.** `THAI-COMMUNITY-2026-BREAKER-BLOCK` (p.62) instead looks back across **at least 2 candles preceding the breaker zone** (3–4 acceptable, sized to the trader's own risk tolerance) and places the SL beyond whichever of those candles' wicks extends furthest — not necessarily the immediately adjacent one. See [bearish-breaker](../08-breaker-blocks/bearish-breaker.md) for the full worked tip. A separate convention from the buffer-sizing options above; this one is about *which wick* to measure from, not how large a buffer to add past it.
 
 ## Related Concepts
 
@@ -106,3 +107,4 @@ All TFs.
 
 - `ICT-2017-CHARTER-OVERVIEW`, `ICT-2022-MENTORSHIP-OVERVIEW`.
 - `THAI-COMMUNITY-2026-ORDER-BLOCK` — candle-count buffer citation and the author's own 10–20 pip preference, p.209.
+- `THAI-COMMUNITY-2026-BREAKER-BLOCK` — multi-candle wick-lookback SL convention, p.62.

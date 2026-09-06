@@ -78,6 +78,8 @@ M15+.
 
 **Example 2 (2026) — worked sequence per `THAI-COMMUNITY-2026-BREAKER-BLOCK` pp. 61–64:** HTF bullish; price fails to print a new Higher High (Failure Swing per Dow Theory), sweeps buy-side liquidity above a recent Equal High/BSL pool, then breaks below the most recent Higher Low — a bearish MSS. The failed bullish OB above that swept high flips to a bearish breaker.
 
+**Stoploss tip (same source, p.62):** rather than referencing only the single candle wick immediately adjacent to the breaker zone, the source looks back across **at least 2 candles preceding the bearish breaker** and places the SL beyond whichever of those candles' wick tips extends furthest above the zone — 3 or 4 candles back is also acceptable, sized to the trader's own risk tolerance. **Take-profit tip (p.62–63):** TP should be at least 2–3x the SL distance; for the level itself the author uses the **low of the candle body** (not the wick) of the relevant bearish candle, or alternatively an old swing low read off a line chart, or ICT's own FVG-based target.
+
 ## Common Mistakes
 
 - **Mistaken polarity flip direction.** Original bullish OB becomes bearish breaker (this file). Original bearish OB becomes bullish breaker.
@@ -91,4 +93,4 @@ M15+.
 ## Citations
 
 - `ICT-2017-CHARTER-OVERVIEW`, `ICT-2022-MENTORSHIP-OVERVIEW`.
-- `THAI-COMMUNITY-2026-BREAKER-BLOCK` — worked bearish sequence, pp. 61–64.
+- `THAI-COMMUNITY-2026-BREAKER-BLOCK` — worked bearish sequence, pp. 61–64; stoploss/take-profit tips, pp. 62–63.
