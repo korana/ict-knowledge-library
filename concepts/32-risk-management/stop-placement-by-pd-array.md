@@ -97,14 +97,16 @@ All TFs.
 - **Wrong invalidation reference.** Bullish FVG SL goes BELOW the FVG (FVG low), not below CE — CE is the entry, the LOW is the invalidation.
 - **Assuming a fixed pip buffer is the only OB convention.** ICT's own Mentorship 2022 guidance (clips 1–2, per a 2026 community source's citation) sizes the OB buffer in **candles** — roughly 2 candles beyond the OB — rather than a fixed pip distance. The same source states its own preference for a 10–20 pip buffer instead, explicitly reasoning that ICT trades futures while the author trades retail forex, where a candle-count buffer translates to inconsistent pip distances across instruments. Treat both as valid conventions for the same underlying "buffer beyond invalidation" principle — this file's 2–5 pip default is a third, tighter convention; none of the three overrides the others.
 - **Using only the single nearest opposing wick as a breaker's SL reference.** `THAI-COMMUNITY-2026-BREAKER-BLOCK` (p.62) instead looks back across **at least 2 candles preceding the breaker zone** (3–4 acceptable, sized to the trader's own risk tolerance) and places the SL beyond whichever of those candles' wicks extends furthest — not necessarily the immediately adjacent one. See [bearish-breaker](../08-breaker-blocks/bearish-breaker.md) for the full worked tip. A separate convention from the buffer-sizing options above; this one is about *which wick* to measure from, not how large a buffer to add past it.
+- **Placing an Order Block's SL at the wick tip with no buffer at all, expecting it to hold like a breaker's wick reference.** `THAI-COMMUNITY-2026-ORDER-BLOCK` (pp.207–208) gives an OB-specific reason a bare wick-tip SL fails more often here than the breaker case above: an Order Block carries **Internal Range Liquidity** status, and ICT's own model has price rebalance into IRL before running out toward **External Range Liquidity** — so price sweeping just past the OB's own wick on the way through is normal delivery behavior, not a setup failure. This is why the same source's fix (pp.207–209) is a buffer or the 2-candle convention already cited above, not a different wick to reference — don't conflate this with the breaker technique above: breakers change *which* wick you measure from, OBs need *margin past* the correct wick because a bare touch is expected, not exceptional.
 
 ## Related Concepts
 
 - [risk-per-trade](risk-per-trade.md), [r-multiple](r-multiple.md), [position-sizing](position-sizing.md).
 - [fair-value-gap](../06-fair-value-gaps/fair-value-gap.md), [bullish-order-block](../07-order-blocks/bullish-order-block.md), [breaker-block](../08-breaker-blocks/breaker-block.md), [mean-threshold](../27-equilibrium/mean-threshold.md), [ce-as-primary-entry](../06-fair-value-gaps/ce-as-primary-entry.md).
+- [internal-range-liquidity](../02-liquidity/internal-range-liquidity.md), [external-range-liquidity](../02-liquidity/external-range-liquidity.md) — the IRL-to-ERL mechanic behind the OB wick-buffer rationale above.
 
 ## Citations
 
 - `ICT-2017-CHARTER-OVERVIEW`, `ICT-2022-MENTORSHIP-OVERVIEW`.
-- `THAI-COMMUNITY-2026-ORDER-BLOCK` — candle-count buffer citation and the author's own 10–20 pip preference, p.209.
+- `THAI-COMMUNITY-2026-ORDER-BLOCK` — candle-count buffer citation and the author's own 10–20 pip preference, p.209; Internal/External Range Liquidity rationale for why a bare wick-tip SL gets swept, pp.207–208.
 - `THAI-COMMUNITY-2026-BREAKER-BLOCK` — multi-candle wick-lookback SL convention, p.62.
